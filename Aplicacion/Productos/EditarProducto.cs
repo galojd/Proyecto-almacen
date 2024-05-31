@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dominio.entities;
 using MediatR;
 using Persistencia;
 
@@ -16,6 +17,7 @@ namespace Aplicacion.Productos
             public string? Descripcion{get;set;}
             public decimal? PrecioUnitario{get;set;}
             public DateTime? FechaActualizacion{get;set;}
+            public int? StockMinimo{get;set;}
         }
 
         public class Manejador : IRequestHandler<Ejecuta>
@@ -36,6 +38,7 @@ namespace Aplicacion.Productos
                 producto.Descripcion = request.Descripcion ?? producto.Descripcion;
                 producto.PrecioUnitario = request.PrecioUnitario ?? producto.PrecioUnitario;
                 producto.FechaActualizacion = DateTime.UtcNow;
+                producto.StockMinimo = request.StockMinimo ?? producto.StockMinimo;
                 
                 var resultado = await _contexto.SaveChangesAsync();
                 if (resultado > 0)

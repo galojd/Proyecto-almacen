@@ -16,6 +16,7 @@ namespace Aplicacion.Productos
             public string? Descripcion{get;set;}
             public decimal? PrecioUnitario{get;set;}
             public DateTime? FechaCreacion{get;set;}
+            public int? StockMinimo{get;set;}
             public Guid? CategoriaId{get;set;}
         }
 
@@ -35,6 +36,7 @@ namespace Aplicacion.Productos
                     Descripcion = request.Descripcion,
                     PrecioUnitario = request.PrecioUnitario,
                     FechaCreacion = DateTime.UtcNow,
+                    StockMinimo = request.StockMinimo,
                     CategoriaId = request.CategoriaId
                 };
                 _contexto.Producto!.Add(producto);

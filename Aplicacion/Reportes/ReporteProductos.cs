@@ -19,21 +19,35 @@ namespace Aplicacion.Reportes
             public Manejador(AlmacenOnlineContext contexto){
                 _contexto = contexto;
             }
-            public Task<List<Reportes>> Handle(ListaReporte request, CancellationToken cancellationToken)
+            public async Task<List<Reportes>> Handle(ListaReporte request, CancellationToken cancellationToken)
             {
-                var reporteproductos = (from producto in _contexto.Producto
-                                 join detalleInventario in _contexto.DetalleInventario! on producto.ProductoId equals detalleInventario.ProductoId
-                                 join inventario in _contexto.Inventario! on detalleInventario.InventarioId equals inventario.InventarioId
-                                 join proveedor in _contexto.Proveedor! on inventario.ProveedorId equals proveedor.ProveedorId
-                                 select new Reportes
-                                 {
-                                     NombreProducto = producto.Nombre,
-                                     Descripcion = producto.Descripcion,
-                                     Precio = detalleInventario.Precio,
-                                     Stocktotal = detalleInventario.StockTotal,
-                                     Fechaentrada = inventario.FechaEntrada,
-                                     NombreProveedor = proveedor.Nombre
-                                 }).ToListAsync(cancellationToken);
+                var reporteproductos = await _contexto.Producto
+                                        .Include(p => p.Categoria)
+                                        .Include(p => p.DetalleInventariolista)
+                                        .ThenInclude(di => di.Inventario)
+                                        .ThenInclude(i => i!.Proveedor)
+                                        .Include(p => p.DetallePedidolista)
+                                        .ThenInclude(dp => dp.Devolucionlista)
+                                        .Select(p => new Reportes
+                                        {
+                                            Id = p.ProductoId,
+                                            NombreProducto = p.Nombre,
+                                            Descripcion = p.Descripcion,
+                                            PrecioUnitario = p.PrecioUnitario,
+                                            FechaActualizacion = p.FechaActualizacion,
+                                            Categoria = p.Categoria!.NombreCategoria,
+                                            //PrecioTotal = p.DetalleInventariolista.FirstOrDefault().Precio,
+                                            Stocktotal = p.DetalleInventariolista.FirstOrDefault().StockTotal,
+                                            Fechaentrada = p.DetalleInventariolista.FirstOrDefault().Inventario.FechaEntrada,
+                                            NombreProveedor = p.DetalleInventariolista.FirstOrDefault().Inventario.Proveedor.Nombre,
+                                            DescripcionInventario = p.DetalleInventariolista.FirstOrDefault().Descripcion,
+                                            Cantidad = p.DetalleInventariolista.FirstOrDefault().Inventario.CantidadProducto ?? 0,
+                                            PrecioTotal = p.PrecioUnitario * (p.DetalleInventariolista.FirstOrDefault().Inventario.CantidadProducto ?? 0),
+                                            DescripcionDevolucion = p.DetallePedidolista.FirstOrDefault().Devolucionlista.FirstOrDefault().Descripcion,
+                                            Fechadevolucion = p.DetallePedidolista.FirstOrDefault().Devolucionlista.FirstOrDefault().FechaDevolucion,
+                                            Devolucioncantidad = p.DetallePedidolista.FirstOrDefault().Devolucionlista.FirstOrDefault().Cantidad
+                                        })
+                                        .ToListAsync(cancellationToken);
                 return reporteproductos;
             }
         }

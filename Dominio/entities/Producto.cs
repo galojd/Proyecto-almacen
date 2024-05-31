@@ -18,6 +18,7 @@ namespace Dominio.entities
         public DateTime? FechaCreacion{get;set;}
         public Guid? CategoriaId{get;set;}
         public Categoria? Categoria{get;set;}
+        public int? StockMinimo{get;set;}
         public ICollection<DetallePedido>? DetallePedidolista{get;set;}
         public ICollection<PrecioWebProducto>? PrecioWebProductolista{get;set;}
         public ICollection<DetalleInventario>? DetalleInventariolista{get;set;}       

@@ -11,6 +11,7 @@ namespace webAPI.Controllers
 {
     public class ProveedorController : Micontrollerbase
     {
+        // http://localhost:5235/api/Proveedor
         [HttpPost]
         public async Task<ActionResult<Unit>> Crear(RegistraProveedor.Ejecuta data){
             return await Mediator.Send(data);

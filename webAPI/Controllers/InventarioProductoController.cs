@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace webAPI.Controllers
 {
+    // http://localhost:5235/api/InventarioProducto
     public class InventarioProductoController : Micontrollerbase
     {
         [HttpPost]

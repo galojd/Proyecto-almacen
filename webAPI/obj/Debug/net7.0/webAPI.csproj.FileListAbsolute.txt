@@ -108,3 +108,10 @@ E:\Proyectos\proyectoAlmacen\webAPI\obj\Debug\net7.0\refint\webAPI.dll
 E:\Proyectos\proyectoAlmacen\webAPI\obj\Debug\net7.0\webAPI.pdb
 E:\Proyectos\proyectoAlmacen\webAPI\obj\Debug\net7.0\webAPI.genruntimeconfig.cache
 E:\Proyectos\proyectoAlmacen\webAPI\obj\Debug\net7.0\ref\webAPI.dll
+E:\Proyectos\proyectoAlmacen\webAPI\bin\Debug\net7.0\ClosedXML.dll
+E:\Proyectos\proyectoAlmacen\webAPI\bin\Debug\net7.0\DocumentFormat.OpenXml.dll
+E:\Proyectos\proyectoAlmacen\webAPI\bin\Debug\net7.0\ExcelNumberFormat.dll
+E:\Proyectos\proyectoAlmacen\webAPI\bin\Debug\net7.0\Irony.dll
+E:\Proyectos\proyectoAlmacen\webAPI\bin\Debug\net7.0\SixLabors.Fonts.dll
+E:\Proyectos\proyectoAlmacen\webAPI\bin\Debug\net7.0\System.IO.Packaging.dll
+E:\Proyectos\proyectoAlmacen\webAPI\bin\Debug\net7.0\XLParser.dll

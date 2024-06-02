@@ -22,6 +22,7 @@ namespace Aplicacion.Seguridad
             public string? Email { get; set; }
             public string? Password { get; set; }
             public string? UserName {get;set;}
+            public string? Telefono {get;set;}
         }
 
         public class manejador : IRequestHandler<Ejecuta, UsuarioData>
@@ -54,7 +55,8 @@ namespace Aplicacion.Seguridad
                 var usuario = new Usuario{
                     NombreCompleto = request.Nombre + " " + request.Apellido,
                     Email = request.Email,
-                    UserName = request.UserName
+                    UserName = request.UserName,
+                    PhoneNumber = request.Telefono
                 };
 
                 var resultado = await _usermanager.CreateAsync(usuario, request.Password!);
@@ -63,7 +65,8 @@ namespace Aplicacion.Seguridad
                     return new UsuarioData{
                         NombreCompleto = usuario.NombreCompleto,
                         Username = usuario.UserName,
-                        Email = usuario.Email
+                        Email = usuario.Email,
+                        PhoneNumber = usuario.PhoneNumber
                     };
                 }
                 throw new Exception("No se pudo agregar el nuevo usuario");

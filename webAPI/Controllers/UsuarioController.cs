@@ -24,6 +24,12 @@ namespace webAPI.Controllers
             return await Mediator.Send(parametros);
 
         }
+
+        [HttpGet]
+        public async Task<ActionResult<List<UsuarioData>>> Get(){
+            
+            return await Mediator.Send(new Mostrar.Ejecuta());
+        }
         
     }
 }

@@ -11,6 +11,6 @@ namespace Dominio.entities
     {
    
         public string? NombreCompleto{get;set;}
-                
+        //public string? Telefono{get;set;}        
     }
 }

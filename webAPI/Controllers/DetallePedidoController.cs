@@ -41,6 +41,13 @@ namespace webAPI.Controllers
             return await Mediator.Send(new EliminarDetallepedido.Ejecuta{Id = id});
             
         }
+
+        // Endpoint para insertar múltiples productos aleatorios
+        [HttpPost("seeddetallepedido")]
+        public async Task<ActionResult<Unit>> SeedProductos()
+        {
+            return await Mediator.Send(new SeedDetallePedido.Insertadetallepedido());
+        }
         
     }
 }

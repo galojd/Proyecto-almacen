@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Dominio.entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Persistencia.seeders;
 
 namespace Persistencia
 {
@@ -17,6 +18,10 @@ namespace Persistencia
         protected override void OnModelCreating(ModelBuilder modelBuilder){
             //esto lo creo para las migraciones de tablas
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new seedCategoria());
+            modelBuilder.ApplyConfiguration(new SeedMetodoPago());
+            modelBuilder.ApplyConfiguration(new SeedCliente());
+            modelBuilder.ApplyConfiguration(new SeedProductoProveedor());
 
              
         } 

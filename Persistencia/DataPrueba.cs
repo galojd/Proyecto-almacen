@@ -13,7 +13,7 @@ namespace Persistencia
             //validamos que existe algun usuario 
             if(usuarioManager.Users.Any() == false){
                 //se crea el objeto a insertar en la base de datos
-                var usuario = new Usuario{NombreCompleto = "Bruno Dias", UserName = "Batman", Email = "Batman@gmail.com"};
+                var usuario = new Usuario{NombreCompleto = "Bruno Dias", UserName = "Batman", Email = "Batman@gmail.com", PhoneNumber = "986100510"};
                 await usuarioManager.CreateAsync(usuario, "Baticontraseña123#");
             }
 

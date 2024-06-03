@@ -2,6 +2,7 @@ using Aplicacion.Clientes;
 using Dominio.entities;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -30,6 +31,7 @@ builder.Services.AddDbContext<AlmacenOnlineContext>(options =>
 
 //se crea un servicio para imediador(este es para el que tiene la capa de aplicacion)
 builder.Services.AddMediatR(typeof(Consulta.Manejador).Assembly);
+//builder.Services.AddMediatR(typeof(IStartup).Assembly);
 
 var app = builder.Build();
 

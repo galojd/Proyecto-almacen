@@ -19,7 +19,7 @@ namespace Aplicacion.DetalleInventarios
                 get
                 {
                     if (StockAnterior == null || StockIngreso == null) return 0;
-                    
+
                     return StockAnterior + StockIngreso;
                 }
             }

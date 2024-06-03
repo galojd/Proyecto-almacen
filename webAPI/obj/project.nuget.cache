@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0+PaNg3H/AZFxgnWLn774P7ec+hPsk49Kh2Iuay3p4EJb/LogHi2NrJ9JmXQOzzQCYyY7UNq3vCn25Eupe3Izw==",
+  "dgSpecHash": "ioaobflYP53u6zhwySP0JmhjtkJnhhCzsnLYnCiJyvJ54SVx0+eA/eAbn38ZcltF25Rfqi0Zr+tWD+zdXZEeGg==",
   "success": true,
   "projectFilePath": "E:\\Proyectos\\proyectoAlmacen\\webAPI\\webAPI.csproj",
   "expectedPackageFiles": [
@@ -26,8 +26,12 @@
     "C:\\Users\\Jose\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.6\\microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.2\\microsoft.aspnetcore.cryptography.internal.7.0.2.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.2\\microsoft.aspnetcore.cryptography.keyderivation.7.0.2.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.2\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.18\\microsoft.aspnetcore.openapi.7.0.18.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -76,6 +80,7 @@
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.21.0\\microsoft.identitymodel.protocols.6.21.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.21.0\\microsoft.identitymodel.protocols.openidconnect.6.21.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.21.0\\microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",

@@ -1,5 +1,8 @@
 using Aplicacion.Clientes;
+using Aplicacion.Inventarios;
+using Aplicacion.Productos;
 using Dominio.entities;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
@@ -23,7 +26,7 @@ builder.Services.AddCors(options =>
 
 
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Consulta_producto_stock>());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -35,7 +38,7 @@ identitybuilder.AddEntityFrameworkStores<AlmacenOnlineContext>();
 identitybuilder.AddSignInManager<SignInManager<Usuario>>();
 builder.Services.TryAddSingleton<ISystemClock, SystemClock>();
 
-
+builder.Services.AddAutoMapper(typeof(ConsultaInventario.Manejador));
 //esto lo agrego para la coneccion, es decir se inyecta para poder mapear con el entity
 builder.Services.AddDbContext<AlmacenOnlineContext>(options =>
 {options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));});

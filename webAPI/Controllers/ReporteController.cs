@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Aplicacion.Productos;
 using Aplicacion.Reportes;
 using Microsoft.AspNetCore.Mvc;
 
@@ -52,6 +53,19 @@ namespace webAPI.Controllers
             return File(resultado, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Reporte de stock bajo.xlsx");
         }
 
+        [HttpGet("consultaproducto/{nombre}")]
+        public async Task<ActionResult<ReporteStockBajo>> nombreproductobusqueda(string nombre)
+        {
+
+            return await Mediator.Send(new Consulta_producto_stock.Ejecuta { Nombre = nombre });
+        }
+
+        [HttpGet("Reporte-bajo-excel")]
+        public async Task<ActionResult> GetReportebajo()
+        {
+            var resultado = await Mediator.Send(new Reportesproductobajoexcel.ListaReporte());
+            return File(resultado, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Reporte de stock bajo.xlsx");
+        }
 
         
     }

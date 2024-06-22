@@ -18,8 +18,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Configurar servicios de CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("http://localhost:5235") // Cambia "https://example.com" por los dominios permitidos
+    options.AddPolicy("AllowAnyOrigin",
+        builder => builder.AllowAnyOrigin()
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
@@ -73,7 +73,7 @@ using(var ambiente = app.Services.CreateScope()){
 //app.UseHttpsRedirection();
 
 // Usar CORS
-app.UseCors("AllowSpecificOrigin");
+app.UseCors("AllowAnyOrigin");
 
 app.UseAuthorization();
 

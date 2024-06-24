@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -29,7 +31,7 @@ namespace Aplicacion.ProductosProveedores
             {
                 var productoproveedor = await _contexto.ProductoProveedor!.FindAsync(request.Id);
                 if(productoproveedor == null){
-                    throw new Exception("No se puede encontrar el registro");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se puede encontrar el registro" });
                 }
                 productoproveedor.Preciocompra = request.Preciocompra ?? productoproveedor.Preciocompra;
                 productoproveedor.Preciounitario = request.Preciounitario ?? productoproveedor.Preciounitario;
@@ -40,7 +42,7 @@ namespace Aplicacion.ProductosProveedores
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo modificar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo editar el registro" });  
             }
         }
     }

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -25,7 +27,7 @@ namespace Aplicacion.ComprasPagos
             {
                 var comprapago = await _contexto.CompraPago!.FindAsync(request.Id);
                 if(comprapago == null){
-                    throw new Exception("El registro no existe");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el registro"});
                 }
                 _contexto.Remove(comprapago);
 
@@ -33,7 +35,7 @@ namespace Aplicacion.ComprasPagos
                 if(resultado>0){
                     return Unit.Value;
                 } 
-                throw new Exception("No se pudo eliminar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo eliminar el registro" });  
             }
         }
     }

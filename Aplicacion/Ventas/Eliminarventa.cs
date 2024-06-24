@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistencia;
@@ -43,7 +45,7 @@ namespace Aplicacion.Ventas
                 var venta = await _contexto.Venta!.FindAsync(request.Id);
                 if (venta == null)
                 {
-                    throw new Exception("La venta no existe");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el registro"});
                 }
 
                 _contexto.Venta.Remove(venta);
@@ -55,7 +57,7 @@ namespace Aplicacion.Ventas
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo eliminar el registro"); 
+               throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo eliminar el registro" });  
             }
         }
     }

@@ -14,7 +14,7 @@ namespace webAPI.Controllers
     {
         // http://localhost:5235/api/Producto
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(RegistrarProducto.Ejecuta data)
+        public async Task<ActionResult<string>> Crear(RegistrarProducto.Ejecuta data)
         {
             return await Mediator.Send(data);
         }

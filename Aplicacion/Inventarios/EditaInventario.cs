@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -28,7 +30,7 @@ namespace Aplicacion.Inventarios
             {
                 var inventario = await _contexto.Inventario!.FindAsync(request.Id);
                 if(inventario == null){
-                    throw new Exception("No se puede encontrar el registro");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se puede encontrar el registro" });
                 }
                 inventario.CantidadProducto = request.CantidadProducto ?? inventario.CantidadProducto;
                 inventario.FechaEntrada = DateTime.UtcNow;
@@ -39,7 +41,7 @@ namespace Aplicacion.Inventarios
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo modificar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo editar el registro" }); 
             }
         }
     }

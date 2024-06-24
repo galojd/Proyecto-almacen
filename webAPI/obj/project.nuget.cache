@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ioaobflYP53u6zhwySP0JmhjtkJnhhCzsnLYnCiJyvJ54SVx0+eA/eAbn38ZcltF25Rfqi0Zr+tWD+zdXZEeGg==",
+  "dgSpecHash": "K2PvSgcMH/zbYDtVujSAygXOZOiqI0OiaZtY573fHf71rF3ckf2oa4950DT4GWOXefoVb41uO115p0CXtxHzYw==",
   "success": true,
   "projectFilePath": "E:\\Proyectos\\proyectoAlmacen\\webAPI\\webAPI.csproj",
   "expectedPackageFiles": [
@@ -90,7 +90,7 @@
     "C:\\Users\\Jose\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\Jose\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\nito.asyncex.context\\5.0.0\\nito.asyncex.context.5.0.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\nito.asyncex.coordination\\5.0.0\\nito.asyncex.coordination.5.0.0.nupkg.sha512",
     "C:\\Users\\Jose\\.nuget\\packages\\nito.asyncex.tasks\\5.0.0\\nito.asyncex.tasks.5.0.0.nupkg.sha512",

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -23,15 +25,15 @@ namespace Aplicacion.Proveedores
 
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
-                //primero busco los instructores ligados a Curso
+                
                 var inventarioDB = _contexto.Inventario!.Where(x => x.ProveedorId == request.Id);
-                //las elimino de cursoinstructor
+               
                 foreach(var inventario in inventarioDB){
                     _contexto.Inventario!.Remove(inventario);
                 }
                 var proveedor = await _contexto.Proveedor!.FindAsync(request.Id);
                 if(proveedor == null){
-                    throw new Exception("El registro no existe");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el registro"});
                 }
                 _contexto.Remove(proveedor);
                 
@@ -39,7 +41,7 @@ namespace Aplicacion.Proveedores
                 if(resultado>0){
                     return Unit.Value;
                 } 
-                throw new Exception("No se pudo eliminar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo eliminar el registro" });  
             }
         }
     }

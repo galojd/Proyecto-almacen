@@ -27,7 +27,7 @@ namespace Aplicacion.Ventas
             {
                 var venta = await _contexto.Venta!.FindAsync(request.Id);
                 if(venta == null){
-                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el cliente que buscaba"});
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar registro"});
                 }
                 return venta;
             }

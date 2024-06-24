@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using Dominio.entities;
 using MediatR;
 using Persistencia;
@@ -10,21 +12,21 @@ namespace Aplicacion.ComprasPagos
 {
     public class RegistrarCompraPago
     {
-        public class Ejecuta : IRequest
+        public class Ejecuta : IRequest<string>
         {
             public DateTime? FechaPago{ get; set; }      
             public Decimal? MontoPago{ get; set; }
             public Guid MetodoPagoId{get; set; }
         }
 
-        public class Manejador : IRequestHandler<Ejecuta>
+        public class Manejador : IRequestHandler<Ejecuta, string>
         {
             private readonly AlmacenOnlineContext _contexto;
 
             public Manejador(AlmacenOnlineContext contexto){
                 _contexto = contexto;
             }
-            public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
+            public async Task<string> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 Guid _CompraPago = Guid.NewGuid();
                 var comprapago = new CompraPago{
@@ -37,9 +39,9 @@ namespace Aplicacion.ComprasPagos
 
                 var valor = await _contexto.SaveChangesAsync();
                 if(valor>0){
-                    return Unit.Value;
+                    return "la creación fue exitosa";
                 }
-                throw new Exception("No se pudo insertar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo insertar el registro" });  
             }
         }
     }

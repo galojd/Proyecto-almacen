@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Dominio.entities;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -32,7 +34,7 @@ namespace Aplicacion.Productos
             {
                 var producto = await _contexto.Producto!.FindAsync(request.Id);
                 if(producto == null){
-                    throw new Exception("No se puede encontrar el registro");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se puede encontrar el registro" });
                 }
                 producto.Nombre = request.Nombre ?? producto.Nombre;
                 producto.Descripcion = request.Descripcion ?? producto.Descripcion;
@@ -46,7 +48,7 @@ namespace Aplicacion.Productos
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo modificar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo editar el registro" });  
             }
         }
     }

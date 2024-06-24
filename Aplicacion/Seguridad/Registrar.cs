@@ -69,7 +69,7 @@ namespace Aplicacion.Seguridad
                         PhoneNumber = usuario.PhoneNumber
                     };
                 }
-                throw new Exception("No se pudo agregar el nuevo usuario");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo insertar el registro" });  
             }
         }
 

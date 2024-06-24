@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -28,7 +30,7 @@ namespace Aplicacion.Devoluciones
             {
                 var devolucion = await _contexto.Devolucion!.FindAsync(request.Id);
                 if(devolucion == null){
-                    throw new Exception("No se puede encontrar el registro");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se puede encontrar el registro" });
                 }
                 devolucion.Cantidad = request.Cantidad ?? devolucion.Cantidad;
                 devolucion.Descripcion = request.Descripcion ?? devolucion.Descripcion;
@@ -40,7 +42,7 @@ namespace Aplicacion.Devoluciones
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo modificar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo editar el registro" }); 
             }
         }
     }

@@ -28,7 +28,7 @@ namespace Aplicacion.Clientes
             {
                 var clientedb = await _contexto.Cliente!.FindAsync(request.ClienteId);
                 if(clientedb == null){
-                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el cliente que buscaba"});
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el registro"});
                 }
                 return clientedb;
             }

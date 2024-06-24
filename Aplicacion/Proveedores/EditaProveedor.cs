@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -33,7 +35,7 @@ namespace Aplicacion.Proveedores
             {
                 var proveedor = await _contexto.Proveedor!.FindAsync(request.Id);
                 if(proveedor == null){
-                    throw new Exception("No se puede encontrar el registro");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se puede encontrar el registro" });
                 }
                 proveedor.Nombre = request.Nombre ?? proveedor.Nombre;
                 proveedor.Contacto = request.Contacto ?? proveedor.Contacto;
@@ -49,7 +51,7 @@ namespace Aplicacion.Proveedores
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo modificar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo editar el registro" }); 
             }
         }
     }

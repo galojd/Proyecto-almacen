@@ -14,7 +14,7 @@ namespace webAPI.Controllers
         //  http://localhost:5235/api/DetalleInventario
 
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(Registradetalleinventario.Ejecuta data){
+        public async Task<ActionResult<string>> Crear(Registradetalleinventario.Ejecuta data){
             return await Mediator.Send(data);
         }
 

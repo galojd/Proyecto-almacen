@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -36,7 +38,7 @@ namespace Aplicacion.ProductosProveedores
 
                 var productoproveedor = await _contexto.ProductoProveedor!.FindAsync(request.Id);
                 if(productoproveedor == null){
-                    throw new Exception("El registro no existe");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el registro"});
                 }
                 _contexto.Remove(productoproveedor);
                 
@@ -44,7 +46,7 @@ namespace Aplicacion.ProductosProveedores
                 if(resultado>0){
                     return Unit.Value;
                 } 
-                throw new Exception("No se pudo eliminar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo eliminar el registro" });  
             }
         }
     }

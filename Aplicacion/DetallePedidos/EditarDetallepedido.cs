@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -28,7 +30,7 @@ namespace Aplicacion.DetallePedidos
             {
                 var detallepedido = await _contexto.DetallePedido!.FindAsync(request.Id);
                 if(detallepedido == null){
-                    throw new Exception("No se puede encontrar el registro");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se puede encontrar el registro" });
                 }
                 detallepedido.Cantidad = request.Cantidad ?? detallepedido.Cantidad;
                 detallepedido.Precio = request.Precio ?? detallepedido.Precio;
@@ -40,7 +42,7 @@ namespace Aplicacion.DetallePedidos
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo modificar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo editar el registro" }); 
             }
         }
     }

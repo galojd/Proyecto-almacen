@@ -14,7 +14,7 @@ namespace webAPI.Controllers
     public class VentaController: Micontrollerbase
     {
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(Registrarventa.Ejecuta data){
+        public async Task<ActionResult<string>> Crear(Registrarventa.Ejecuta data){
             return await Mediator.Send(data);
         }
         

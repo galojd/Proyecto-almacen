@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -31,7 +33,7 @@ namespace Aplicacion.Clientes
             {
                 var cliente = await _contexto.Cliente!.FindAsync(request.ClienteId);
                 if(cliente == null){
-                    throw new Exception("No se puede eliminar el cliente");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se puede encontrar el registro" });
                 }
 
                 cliente.DNI = request.DNI ?? cliente.DNI;
@@ -47,7 +49,7 @@ namespace Aplicacion.Clientes
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo modificar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo insertar el registro" });  
             }
         }
     }

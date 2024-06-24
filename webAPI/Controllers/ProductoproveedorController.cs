@@ -13,7 +13,7 @@ namespace webAPI.Controllers
     public class ProductoproveedorController : Micontrollerbase
     {
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(RegistraProductoProveedor.Ejecuta data){
+        public async Task<ActionResult<string>> Crear(RegistraProductoProveedor.Ejecuta data){
             return await Mediator.Send(data);
         }
 

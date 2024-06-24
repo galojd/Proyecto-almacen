@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -23,9 +25,15 @@ namespace Aplicacion.Metododepagos
 
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
+                var metodoDB = _contexto.CompraPago!.Where(x => x.MetodoPagoId == request.Id);
+                //las elimino de cursoinstructor
+                foreach(var devolucion in metodoDB){
+                    _contexto.CompraPago!.Remove(devolucion);
+                }
+
                 var metodo = await _contexto.MetodoPago!.FindAsync(request.Id);
                 if(metodo == null){
-                    throw new Exception("El metodo de pago no existe");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el registro"});
                 }
                 _contexto.Remove(metodo);
 
@@ -33,7 +41,7 @@ namespace Aplicacion.Metododepagos
                 if(resultado>0){
                     return Unit.Value;
                 } 
-                throw new Exception("No se pudo eliminar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo eliminar el registro" });
             }
         }
     }

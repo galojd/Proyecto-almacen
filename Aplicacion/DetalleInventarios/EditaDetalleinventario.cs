@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -30,7 +32,7 @@ namespace Aplicacion.DetalleInventarios
             {
                 var detalleinventario = await _contexto.DetalleInventario!.FindAsync(request.Id);
                 if(detalleinventario == null){
-                    throw new Exception("No se puede encontrar el registro");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se puede encontrar el registro" });
                 }
                 detalleinventario.StockAnterior = request.StockAnterior ?? detalleinventario.StockAnterior;
                 detalleinventario.StockIngreso = request.StockIngreso ?? detalleinventario.StockIngreso;
@@ -44,7 +46,7 @@ namespace Aplicacion.DetalleInventarios
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo modificar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo editar el registro" });  
             }
         }
     }

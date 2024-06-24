@@ -13,7 +13,7 @@ namespace webAPI.Controllers
     public class RegistraDetalleController : Micontrollerbase
     {
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(Registradetalleinventario.Ejecuta data){
+        public async Task<ActionResult<string>> Crear(Registradetalleinventario.Ejecuta data){
             return await Mediator.Send(data);
         }
 

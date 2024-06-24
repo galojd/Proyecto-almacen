@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using Dominio.entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +13,7 @@ namespace Aplicacion.Productos
 {
     public class RegistrarProducto
     {
-        public class Ejecuta : IRequest
+        public class Ejecuta : IRequest<string>
         {
             public string? Nombre { get; set; }
             public string? Descripcion { get; set; }
@@ -21,7 +23,7 @@ namespace Aplicacion.Productos
             public Guid? CategoriaId { get; set; }
         }
 
-        public class Manejador : IRequestHandler<Ejecuta>
+        public class Manejador : IRequestHandler<Ejecuta, string>
         {
             private readonly AlmacenOnlineContext _contexto;
 
@@ -29,14 +31,14 @@ namespace Aplicacion.Productos
             {
                 _contexto = contexto;
             }
-            public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
+            public async Task<string> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 var productoregistrado = await _contexto.Producto!
                                             .FirstOrDefaultAsync(p => p.Nombre == request.Nombre, cancellationToken);
 
                 if (productoregistrado != null)
                 {
-                    throw new Exception("El producto con este nombre ya existe.");
+                    throw new ManejadorExcepcion(HttpStatusCode.Conflict, new { mensaje = "El producto con este nombre ya existe." }); 
                 }
 
                 Guid _productoid = Guid.NewGuid();
@@ -56,9 +58,9 @@ namespace Aplicacion.Productos
                 var valor = await _contexto.SaveChangesAsync();
                 if (valor > 0)
                 {
-                    return Unit.Value;
+                    return "la creación fue exitosa";
                 }
-                throw new Exception("No se pudo insertar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo insertar el registro" });  
             }
         }
     }

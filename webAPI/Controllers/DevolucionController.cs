@@ -13,7 +13,7 @@ namespace webAPI.Controllers
     public class DevolucionController : Micontrollerbase
     {
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(RegistrarDevolcion.Ejecuta data){
+        public async Task<ActionResult<string>> Crear(RegistrarDevolcion.Ejecuta data){
             return await Mediator.Send(data);
         }
 

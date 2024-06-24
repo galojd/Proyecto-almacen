@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Persistencia;
+using webAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -74,6 +75,8 @@ using(var ambiente = app.Services.CreateScope()){
 
 // Usar CORS
 app.UseCors("AllowAnyOrigin");
+
+app.UseMiddleware<ManejadorErrorMiddleware>();
 
 app.UseAuthorization();
 

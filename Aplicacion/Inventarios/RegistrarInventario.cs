@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using Dominio.entities;
 using MediatR;
 using Persistencia;
@@ -10,14 +12,14 @@ namespace Aplicacion.Inventarios
 {
     public class RegistrarInventario
     {
-        public class Ejecuta : IRequest
+        public class Ejecuta : IRequest<string>
         {
             public DateTime? FechaEntrada{ get; set; }
             public int? CantidadProducto{ get; set; }
             public Guid? ProveedorId{ get; set; }
         }
 
-        public class Manejador : IRequestHandler<Ejecuta>
+        public class Manejador : IRequestHandler<Ejecuta, string>
         {
             private readonly AlmacenOnlineContext _contexto;
 
@@ -25,7 +27,7 @@ namespace Aplicacion.Inventarios
                 _contexto = contexto;
             }
 
-            public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
+            public async Task<string> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 Guid _inventarioid = Guid.NewGuid();
                 var inventario = new Inventario{
@@ -38,9 +40,9 @@ namespace Aplicacion.Inventarios
                 
                 var valor = await _contexto.SaveChangesAsync();
                 if(valor>0){
-                    return Unit.Value;
+                    return "la creación fue exitosa";
                 }
-                throw new Exception("No se pudo insertar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo insertar el registro" });  
             }
         }
     }

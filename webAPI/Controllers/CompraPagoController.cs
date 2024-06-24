@@ -14,7 +14,7 @@ namespace webAPI.Controllers
     public class CompraPagoController : Micontrollerbase
     {
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(RegistrarCompraPago.Ejecuta data){
+        public async Task<ActionResult<string>> Crear(RegistrarCompraPago.Ejecuta data){
             return await Mediator.Send(data);
         }
 

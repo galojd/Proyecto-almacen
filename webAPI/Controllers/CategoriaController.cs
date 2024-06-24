@@ -14,7 +14,7 @@ namespace webAPI.Controllers
     public class CategoriaController : Micontrollerbase
     {
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(RegistrarCategoria.Ejecuta data){
+        public async Task<ActionResult<string>> Crear(RegistrarCategoria.Ejecuta data){
             return await Mediator.Send(data);
         }
 
@@ -31,7 +31,7 @@ namespace webAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<Unit>> Editar(Guid id, EditarCategoria.Ejecuta data){
+        public async Task<ActionResult<string>> Editar(Guid id, EditarCategoria.Ejecuta data){
             data.Id = id;
             return await Mediator.Send(data);    
         }

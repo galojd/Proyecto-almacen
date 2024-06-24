@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using Dominio.entities;
 using MediatR;
 using Persistencia;
@@ -10,7 +12,7 @@ namespace Aplicacion.Clientes
 {
     public class RegistrarCliente
     {
-        public class ejecuta : IRequest
+        public class ejecuta : IRequest<string>
         {
             public string? DNI{get;set;}
             public string? RUC{get;set;}   
@@ -20,14 +22,14 @@ namespace Aplicacion.Clientes
             public string? Direccion{get;set;}
         }
 
-        public class Manejador : IRequestHandler<ejecuta>
+        public class Manejador : IRequestHandler<ejecuta, string>
         {
             private readonly AlmacenOnlineContext _contexto;
 
             public Manejador(AlmacenOnlineContext contexto){
                 _contexto = contexto;
             }
-            public async Task<Unit> Handle(ejecuta request, CancellationToken cancellationToken)
+            public async Task<string> Handle(ejecuta request, CancellationToken cancellationToken)
             {
                  //aqui generamos el id con un guid, el guid crea un valor aleatorio
                 Guid _clienteid = Guid.NewGuid();
@@ -48,9 +50,9 @@ namespace Aplicacion.Clientes
                 //este SaveChangesAsync devuelve el estado de la transaccion, si devuelve 0 fallo, si es 1 o superior si se hizo la transaccion
                 var valor = await _contexto.SaveChangesAsync();
                 if(valor>0){
-                    return Unit.Value;
+                    return "la creación fue exitosa";
                 }
-                throw new Exception("No se pudo insertar el cliente");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo insertar el registro" });  
             }
         }
 

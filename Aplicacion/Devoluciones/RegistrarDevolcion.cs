@@ -10,7 +10,7 @@ namespace Aplicacion.Devoluciones
 {
     public class RegistrarDevolcion
     {
-        public class Ejecuta : IRequest
+        public class Ejecuta : IRequest<string>
         {
             public int? Cantidad{get;set;}
             public DateTime? FechaDevolucion{get;set;}
@@ -18,14 +18,14 @@ namespace Aplicacion.Devoluciones
             public Guid? DetallePedidoId{get;set;}
         }
 
-        public class Manejador : IRequestHandler<Ejecuta>
+        public class Manejador : IRequestHandler<Ejecuta, string>
         {
             private readonly AlmacenOnlineContext _contexto;
 
             public Manejador(AlmacenOnlineContext contexto){
                 _contexto = contexto;
             }
-            public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
+            public async Task<string> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 Guid _devolucionid = Guid.NewGuid();
                 var devolucion = new Devolucion{
@@ -39,7 +39,7 @@ namespace Aplicacion.Devoluciones
                 
                 var valor = await _contexto.SaveChangesAsync();
                 if(valor>0){
-                    return Unit.Value;
+                    return "la creación fue exitosa";
                 }
                 throw new Exception("No se pudo insertar el registro");
             }

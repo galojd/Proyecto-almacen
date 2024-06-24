@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net;
+using Aplicacion.ManejadorError;
 using MediatR;
 using Persistencia;
 
@@ -31,7 +33,7 @@ namespace Aplicacion.PreciosWeb
                 
                 var precioweb = await _contexto.PrecioWeb!.FindAsync(request.Id);
                 if(precioweb == null){
-                    throw new Exception("El registro no existe");
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el registro"});
                 }
                 _contexto.Remove(precioweb);
                 
@@ -39,7 +41,7 @@ namespace Aplicacion.PreciosWeb
                 if(resultado>0){
                     return Unit.Value;
                 } 
-                throw new Exception("No se pudo eliminar el registro");
+                throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo eliminar el registro" }); 
             }
         }
     }

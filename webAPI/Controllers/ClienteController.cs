@@ -17,7 +17,7 @@ namespace webAPI.Controllers
         // http://localhost:5235/api/Cliente
         //registrar cliente
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(RegistrarCliente.ejecuta data){
+        public async Task<ActionResult<string>> Crear(RegistrarCliente.ejecuta data){
             return await Mediator.Send(data);
         }
         

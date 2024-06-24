@@ -13,7 +13,7 @@ namespace webAPI.Controllers
     public class MostrarMetodoController: Micontrollerbase
     {
         [HttpPost]
-        public async Task<ActionResult<Unit>> Crear(RegistrarMetodo.Ejecuta data){
+        public async Task<ActionResult<string>> Crear(RegistrarMetodo.Ejecuta data){
             return await Mediator.Send(data);
         }
 

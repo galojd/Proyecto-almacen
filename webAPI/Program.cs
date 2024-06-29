@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.OpenApi.Models;
 using Persistencia;
 using webAPI.Middleware;
 
@@ -48,6 +49,15 @@ builder.Services.AddDbContext<AlmacenOnlineContext>(options =>
 builder.Services.AddMediatR(typeof(Consulta.Manejador).Assembly);
 //builder.Services.AddMediatR(typeof(IStartup).Assembly);
 
+builder.Services.AddSwaggerGen( c => {
+    c.SwaggerDoc("v1", new OpenApiInfo{
+        Title = "Servicios para mantenimiento de Almacen",
+        Version = "v1"
+    });
+    //le indico que trabaje con el nombre completo de las clases que me permiten mapear el nombre del cliente
+    c.CustomSchemaIds(c => c.FullName);
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -79,6 +89,11 @@ app.UseCors("AllowAnyOrigin");
 app.UseMiddleware<ManejadorErrorMiddleware>();
 
 app.UseAuthorization();
+
+app.UseSwagger();
+app.UseSwaggerUI( c => {
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Almacen Online v1");
+});
 
 app.MapControllers();
 

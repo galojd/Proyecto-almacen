@@ -19,7 +19,7 @@ namespace webAPI.Controllers
         }
         
         [HttpGet]
-        public async Task<ActionResult<List<Venta>>> Get(){
+        public async Task<ActionResult<List<VentaDto>>> Get(){
             
             return await Mediator.Send(new Consultaventa.ListaVentas());
         }

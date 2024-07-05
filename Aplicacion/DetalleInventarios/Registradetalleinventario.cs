@@ -26,7 +26,7 @@ namespace Aplicacion.DetalleInventarios
                 }
             }
             public string? Descripcion { get; set; }
-            public decimal? Precio { get; set; }
+            //public decimal? Precio { get; set; }
             public Guid? ProductoId { get; set; }
             public Guid? InventarioId { get; set; }
         }
@@ -41,8 +41,13 @@ namespace Aplicacion.DetalleInventarios
 
             public async Task<string> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
-                Guid _detalleinventarioid = Guid.NewGuid();
-                //var stocktotal = request.StockAnterior + request.StockIngreso;
+                var producto = await _contexto.Producto!.FindAsync(request.ProductoId);
+                if(producto == null){
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no existe un producto asociado"});
+                }
+                var preciounico = producto.PrecioUnitario;
+                var preciototalitario = preciounico * request.StockTotal;
+                Guid _detalleinventarioid = Guid.NewGuid();              
                 var detalleinventario = new DetalleInventario
                 {
                     DetalleInventarioId = _detalleinventarioid,
@@ -50,7 +55,7 @@ namespace Aplicacion.DetalleInventarios
                     StockIngreso = request.StockIngreso,
                     Descripcion = request.Descripcion,
                     StockTotal = request.StockTotal,
-                    Precio = request.Precio,
+                    Precio = preciototalitario,
                     ProductoId = request.ProductoId,
                     InventarioId = request.InventarioId
 

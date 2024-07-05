@@ -18,7 +18,7 @@ namespace webAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Devolucion>>> Get(){
+        public async Task<ActionResult<List<devolucionDTO>>> Get(){
             
             return await Mediator.Send(new ConsultaDevolucion.Listadevolucion());
         }

@@ -55,5 +55,29 @@ namespace webAPI.Controllers
             return await Mediator.Send(new SeedProducto.InsertaProductos());
         }
 
+        //Con este api aumento la cantidad de productos registrados en el inventario
+        [HttpPost("IngresarCantidad/{nombre}")]
+        public async Task<ActionResult<string>> busquedaproducto(string nombre, Aumentarstock.Ejecuta data)
+        {
+            if (data == null)
+            {
+                return BadRequest("El cuerpo de la solicitud no puede estar vacío.");
+            }
+            data.NombreProducto = nombre;
+            return await Mediator.Send(data);
+        }
+
+        //Con este api disminuyo la cantidad de productos registrados en el inventario
+        [HttpPost("DisminuirCantidad/{nombre}")]
+        public async Task<ActionResult<string>> busquedaproducto(string nombre, DisminuirStock.Ejecuta data)
+        {
+            if (data == null)
+            {
+                return BadRequest("El cuerpo de la solicitud no puede estar vacío.");
+            }
+            data.NombreProducto = nombre;
+            return await Mediator.Send(data);
+        }
+
     }
 }

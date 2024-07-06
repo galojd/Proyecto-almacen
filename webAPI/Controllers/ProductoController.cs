@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Aplicacion.Inventarios;
 using Aplicacion.Productos;
 using Aplicacion.Reportes;
 using Dominio.entities;
@@ -20,7 +21,7 @@ namespace webAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Producto>>> Get()
+        public async Task<ActionResult<List<ProductoDTO>>> Get()
         {
 
             return await Mediator.Send(new ConsultaProducto.ListaProducto());

@@ -43,7 +43,13 @@ builder.Services.TryAddSingleton<ISystemClock, SystemClock>();
 builder.Services.AddAutoMapper(typeof(ConsultaInventario.Manejador));
 //esto lo agrego para la coneccion, es decir se inyecta para poder mapear con el entity
 builder.Services.AddDbContext<AlmacenOnlineContext>(options =>
-{options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));});
+//{ options.UseSqlServer(builder.Configuration.GetConnectionString("AlmacenConecction")); });
+                options
+                .UseMySql(
+                    builder.Configuration.GetConnectionString("AlmacenConecction"),
+                    new MySqlServerVersion(new Version(10, 5, 23))
+                )
+            );
 
 //se crea un servicio para imediador(este es para el que tiene la capa de aplicacion)
 builder.Services.AddMediatR(typeof(Consulta.Manejador).Assembly);

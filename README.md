@@ -42,7 +42,7 @@ docker build --tag nombre_usuario_dockerhub/nombre_de_imagen:version ubicacion_a
 - Ejem:
 
 ```
-docker build --tag dominanto/almacen-api:v1 .
+docker build --tag dominanto/almacen-api:v2 .
 ```
 - Nos logueamos a **docker.hub** (se hace solo una vez, en caso ya lo hayas echo antes en tu pc, no necesitarias ejecutar esto de nuevo)
 

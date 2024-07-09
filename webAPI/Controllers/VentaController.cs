@@ -17,11 +17,22 @@ namespace webAPI.Controllers
         public async Task<ActionResult<string>> Crear(Registrarventa.Ejecuta data){
             return await Mediator.Send(data);
         }
+
+        [HttpPost("registrarventa")]
+        public async Task<ActionResult<string>> Crearventa(RegistrarVentaPedido.Ejecuta data){
+            return await Mediator.Send(data);
+        }
         
         [HttpGet]
         public async Task<ActionResult<List<VentaDto>>> Get(){
             
             return await Mediator.Send(new Consultaventa.ListaVentas());
+        }
+
+        [HttpGet("ventafiltrada")]
+        public async Task<ActionResult<List<VentaFiltrada>>> Getventafiltrada(){
+            
+            return await Mediator.Send(new FiltrarVenta.ListaVentas());
         }
 
         [HttpGet("{id}")]

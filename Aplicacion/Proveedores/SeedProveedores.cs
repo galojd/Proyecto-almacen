@@ -35,10 +35,10 @@ namespace Aplicacion.Proveedores
                 for (int i = 0; i < 50; i++)
                 {
                     var prodpro = productoproveedor[_random.Next(productoproveedor.Count)]; // Seleccionar una categoría aleatoria de la lista
-
+                    
                     var proveedor = new Proveedor
                     {
-                        Nombre = nombres[_random.Next(nombres.Length)],
+                        Nombre = "empresa" + i,
                         Contacto = contactos[_random.Next(contactos.Length)], // Generar un precio aleatorio
                         Telefono = "9" + _random.Next(100000000, 999999999).ToString(),
                         Direccion = direcciones[_random.Next(direcciones.Length)], // Generar un stock mínimo aleatorio

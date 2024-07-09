@@ -38,32 +38,32 @@ namespace Persistencia.Migrations
                     b.HasData(
                         new
                         {
-                            CategoriaId = new Guid("47fec3e6-fa34-4a0e-82cd-5a5d9638025b"),
+                            CategoriaId = new Guid("9799e4a7-4fab-4ca0-a70e-0cacedc747bf"),
                             NombreCategoria = "Placa madre"
                         },
                         new
                         {
-                            CategoriaId = new Guid("b7019621-86a2-4b60-9a6d-323e9e0bd44a"),
+                            CategoriaId = new Guid("03afe943-ca5e-4a69-a2c8-0c8588ea2976"),
                             NombreCategoria = "Tarjeta gráfica"
                         },
                         new
                         {
-                            CategoriaId = new Guid("03f545e4-5152-4b0a-a5d5-8f4e72010688"),
+                            CategoriaId = new Guid("e8f375b8-0b1a-447a-9f47-060fab1bb170"),
                             NombreCategoria = "Fuente de alimentación"
                         },
                         new
                         {
-                            CategoriaId = new Guid("1253758b-bd00-4e7c-9bde-e76f3aaf1fc3"),
+                            CategoriaId = new Guid("5f96a417-f471-49c6-b278-21813ca1a007"),
                             NombreCategoria = "Memoria RAM"
                         },
                         new
                         {
-                            CategoriaId = new Guid("dd1f37a6-fe39-4536-ac2f-6eeeb446cf6f"),
+                            CategoriaId = new Guid("7f0337e7-a65c-4a57-aa8c-8df3f33bcfca"),
                             NombreCategoria = "Disco duro SSD"
                         },
                         new
                         {
-                            CategoriaId = new Guid("e9f4a89a-fc11-415a-b9d5-cb43a064d14d"),
+                            CategoriaId = new Guid("0b249712-dd6f-4ddd-94fc-8eb52791bd2f"),
                             NombreCategoria = "Procesador"
                         });
                 });
@@ -102,553 +102,553 @@ namespace Persistencia.Migrations
                     b.HasData(
                         new
                         {
-                            ClienteId = new Guid("e95725be-fb71-498f-9d9f-ddf7948d771d"),
-                            DNI = "75517717",
-                            Direccion = "Calle B, 78, Lima",
-                            Email = "correo954@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2608),
-                            Nombres = "María Lucía",
+                            ClienteId = new Guid("33a2d44b-8d01-4cd5-86f9-b650dddcb83f"),
+                            DNI = "90682756",
+                            Direccion = "Calle A, 92, Cusco",
+                            Email = "cliente178@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9311),
+                            Nombres = "Lucía Ana",
                             RUC = "20428729201",
-                            Telefono = "575740018"
+                            Telefono = "319968920"
                         },
                         new
                         {
-                            ClienteId = new Guid("45423f43-43e5-453e-b4fd-6e80d8654bc7"),
-                            DNI = "67972584",
-                            Direccion = "Calle A, 25, Piura",
-                            Email = "correo318@yahoo.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2621),
-                            Nombres = "Ana Pedro",
-                            RUC = "20428729201",
-                            Telefono = "823905666"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("01b6b5cf-e32e-4275-82e8-f91d5a96f6fc"),
-                            DNI = "77680962",
-                            Direccion = "Calle E, 70, Lima",
-                            Email = "usuario348@hotmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2665),
-                            Nombres = "Carlos Ana",
-                            RUC = "20428729201",
-                            Telefono = "566347286"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("e773edc4-e565-4409-bcb9-bc85168d80ec"),
-                            DNI = "65541326",
-                            Direccion = "Calle E, 17, Cusco",
-                            Email = "usuario829@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2676),
-                            Nombres = "Sofía Luis",
-                            RUC = "20428729201",
-                            Telefono = "430387712"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("876c8bdc-398e-4e0b-ab47-dd3084e780f0"),
-                            DNI = "46571894",
-                            Direccion = "Calle A, 11, Lima",
-                            Email = "comprador399@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2686),
-                            Nombres = "Luis Ana",
-                            RUC = "20428729201",
-                            Telefono = "161835804"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("0344b0fc-7001-44ca-a08c-60cd083bff89"),
-                            DNI = "89572608",
-                            Direccion = "Calle E, 57, Arequipa",
-                            Email = "comprador278@hotmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2697),
-                            Nombres = "Diego María",
-                            RUC = "20428729201",
-                            Telefono = "269026968"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("1803e182-2cb7-4e82-9948-8315900b3698"),
-                            DNI = "27319376",
-                            Direccion = "Calle C, 77, Arequipa",
-                            Email = "usuario976@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2704),
-                            Nombres = "Juan María",
-                            RUC = "20428729201",
-                            Telefono = "394389531"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("655fff76-84cc-4113-883c-3e4ce7fa7735"),
-                            DNI = "35323295",
-                            Direccion = "Calle B, 92, Piura",
-                            Email = "comprador516@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2711),
-                            Nombres = "Laura Sofía",
-                            RUC = "20428729201",
-                            Telefono = "964796459"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("e898429f-db9d-4761-a069-52c8d804f1bb"),
-                            DNI = "88071788",
-                            Direccion = "Calle D, 39, Arequipa",
-                            Email = "contacto596@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2719),
-                            Nombres = "Luis Pedro",
-                            RUC = "20428729201",
-                            Telefono = "577374377"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("82ac6336-04d1-4a2d-a069-bf1e8e7c4642"),
-                            DNI = "50590385",
-                            Direccion = "Calle C, 47, Piura",
-                            Email = "cliente986@hotmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2726),
-                            Nombres = "Lucía Lucía",
-                            RUC = "20428729201",
-                            Telefono = "253261453"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("d3026257-ff9f-416c-9888-534cbbde0bcf"),
-                            DNI = "15649049",
-                            Direccion = "Calle A, 22, Piura",
-                            Email = "usuario956@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2734),
-                            Nombres = "Ana María",
-                            RUC = "20428729201",
-                            Telefono = "390000322"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("2c1981cb-201b-4c50-9b12-c07fc70d1b87"),
-                            DNI = "77650483",
-                            Direccion = "Calle E, 18, Piura",
-                            Email = "usuario412@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2741),
-                            Nombres = "Juan Pedro",
-                            RUC = "20428729201",
-                            Telefono = "560012280"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("80a38d6b-edd9-43db-be65-9916ff225d6c"),
-                            DNI = "47173852",
-                            Direccion = "Calle E, 23, Cusco",
-                            Email = "correo53@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2748),
-                            Nombres = "Laura Diego",
-                            RUC = "20428729201",
-                            Telefono = "391049853"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("5ea760be-0dd7-4354-9006-72ed75c6d452"),
-                            DNI = "26599162",
-                            Direccion = "Calle E, 62, Cusco",
-                            Email = "correo607@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2781),
-                            Nombres = "Luis Laura",
-                            RUC = "20428729201",
-                            Telefono = "143731125"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("68e95248-e21f-4a8e-b46b-a5f1ab6eccfc"),
-                            DNI = "12413904",
-                            Direccion = "Calle A, 70, Arequipa",
-                            Email = "correo83@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2789),
-                            Nombres = "Pedro Ana",
-                            RUC = "20428729201",
-                            Telefono = "526156476"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("aa89a168-eb8f-4c55-94f0-c9f847457a00"),
-                            DNI = "54267770",
-                            Direccion = "Calle A, 83, Arequipa",
-                            Email = "usuario726@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2796),
-                            Nombres = "Carlos Pedro",
-                            RUC = "20428729201",
-                            Telefono = "871068574"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("6faa4622-ae0a-4ca2-ac38-c8f8ab540ae9"),
-                            DNI = "38686047",
-                            Direccion = "Calle E, 78, Trujillo",
-                            Email = "cliente67@yahoo.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2804),
-                            Nombres = "Juan Carlos",
-                            RUC = "20428729201",
-                            Telefono = "505598613"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("533c624a-6993-4bd0-a8b9-9a16d82338a0"),
-                            DNI = "61948335",
-                            Direccion = "Calle A, 48, Cusco",
-                            Email = "usuario794@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2810),
-                            Nombres = "Juan Lucía",
-                            RUC = "20428729201",
-                            Telefono = "646946924"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("347f7224-95a2-48ef-b7e1-7386fb138be1"),
-                            DNI = "86586260",
-                            Direccion = "Calle B, 56, Arequipa",
-                            Email = "comprador293@hotmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2817),
-                            Nombres = "Juan Diego",
-                            RUC = "20428729201",
-                            Telefono = "836268823"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("623750fd-c7eb-4fb5-adf5-7da9c506e7c4"),
-                            DNI = "54468683",
-                            Direccion = "Calle C, 34, Trujillo",
-                            Email = "comprador604@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2824),
-                            Nombres = "Ana Ana",
-                            RUC = "20428729201",
-                            Telefono = "310259821"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("646a524e-0023-4d72-8781-43eb7c29e2dc"),
-                            DNI = "26624074",
-                            Direccion = "Calle C, 20, Lima",
-                            Email = "usuario137@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2831),
-                            Nombres = "Diego María",
-                            RUC = "20428729201",
-                            Telefono = "702226094"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("3a968750-c735-444b-826c-8f0b5f9f323c"),
-                            DNI = "52014821",
-                            Direccion = "Calle C, 53, Lima",
-                            Email = "correo165@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2840),
-                            Nombres = "Carlos Ana",
-                            RUC = "20428729201",
-                            Telefono = "379689440"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("e7e16985-c52b-4018-b2a9-8c3a3f810856"),
-                            DNI = "47997607",
-                            Direccion = "Calle B, 98, Cusco",
-                            Email = "contacto460@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2848),
-                            Nombres = "María Laura",
-                            RUC = "20428729201",
-                            Telefono = "326971860"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("6d33f3be-5b27-4fc2-8a33-a5f925cd9fcc"),
-                            DNI = "52717412",
-                            Direccion = "Calle B, 4, Piura",
-                            Email = "usuario460@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2855),
-                            Nombres = "Luis Laura",
-                            RUC = "20428729201",
-                            Telefono = "647289987"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("1a7a3b4c-3e50-448a-82c3-3417f899d37c"),
-                            DNI = "93368588",
-                            Direccion = "Calle C, 41, Cusco",
-                            Email = "correo804@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2862),
-                            Nombres = "Juan Pedro",
-                            RUC = "20428729201",
-                            Telefono = "888693657"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("a5f5e195-a91b-489a-b29b-6b831cc58e00"),
-                            DNI = "76170625",
-                            Direccion = "Calle A, 17, Piura",
-                            Email = "comprador533@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2893),
-                            Nombres = "Juan María",
-                            RUC = "20428729201",
-                            Telefono = "506684380"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("69dd9783-ef39-4bae-862e-8734ed8c4985"),
-                            DNI = "70542805",
-                            Direccion = "Calle C, 64, Cusco",
-                            Email = "usuario618@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2900),
-                            Nombres = "Luis Juan",
-                            RUC = "20428729201",
-                            Telefono = "369163434"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("d27cb8b2-8202-46ee-bab1-4d8de2951182"),
-                            DNI = "20164710",
-                            Direccion = "Calle B, 24, Lima",
-                            Email = "contacto158@yahoo.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2907),
-                            Nombres = "Luis Lucía",
-                            RUC = "20428729201",
-                            Telefono = "208395337"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("a1dc9e8c-f1d5-4724-886b-9724797b5d71"),
-                            DNI = "67097055",
-                            Direccion = "Calle A, 9, Lima",
-                            Email = "cliente666@hotmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2913),
-                            Nombres = "Lucía Juan",
-                            RUC = "20428729201",
-                            Telefono = "621552248"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("e6af45ff-4274-4e5a-937c-90407d8a358e"),
-                            DNI = "80184797",
-                            Direccion = "Calle A, 68, Piura",
-                            Email = "usuario991@yahoo.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2923),
-                            Nombres = "Luis Laura",
-                            RUC = "20428729201",
-                            Telefono = "302134054"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("825a7830-c14d-47ba-b87d-faa05abdc8dd"),
-                            DNI = "45187632",
-                            Direccion = "Calle A, 41, Arequipa",
-                            Email = "cliente765@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2929),
-                            Nombres = "Pedro Carlos",
-                            RUC = "20428729201",
-                            Telefono = "914957220"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("04e9777a-e3cf-4302-94d4-3ab7a6813daf"),
-                            DNI = "91932812",
-                            Direccion = "Calle D, 78, Trujillo",
-                            Email = "usuario63@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2937),
-                            Nombres = "Luis Sofía",
-                            RUC = "20428729201",
-                            Telefono = "609062364"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("be398d79-d55a-464c-92bb-5a2722bdef42"),
-                            DNI = "92721956",
-                            Direccion = "Calle B, 72, Trujillo",
-                            Email = "correo472@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2943),
-                            Nombres = "Juan Lucía",
-                            RUC = "20428729201",
-                            Telefono = "604149603"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("4b85ad42-16dd-4929-8538-04a9d9a9c639"),
-                            DNI = "23400427",
-                            Direccion = "Calle A, 57, Lima",
-                            Email = "correo786@hotmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2950),
-                            Nombres = "Diego Pedro",
-                            RUC = "20428729201",
-                            Telefono = "635893535"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("ad075ca5-4b11-47b5-afa3-2e53ba329b55"),
-                            DNI = "55512036",
-                            Direccion = "Calle C, 77, Lima",
-                            Email = "comprador703@hotmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2957),
-                            Nombres = "Luis Luis",
-                            RUC = "20428729201",
-                            Telefono = "407981485"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("2c8a7002-1c08-471f-9ac5-9a489b2a5bb0"),
-                            DNI = "32474700",
-                            Direccion = "Calle E, 38, Trujillo",
-                            Email = "usuario9@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(2964),
-                            Nombres = "Ana Lucía",
-                            RUC = "20428729201",
-                            Telefono = "142136800"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("29864b5a-4095-4679-ac0a-9579cd859bd2"),
-                            DNI = "70288412",
-                            Direccion = "Calle B, 59, Lima",
-                            Email = "contacto103@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3001),
-                            Nombres = "Sofía Sofía",
-                            RUC = "20428729201",
-                            Telefono = "801274722"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("d9422309-a6ff-4999-b916-2109e4a5cfc1"),
-                            DNI = "50087402",
-                            Direccion = "Calle A, 96, Lima",
-                            Email = "comprador301@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3011),
-                            Nombres = "Diego Pedro",
-                            RUC = "20428729201",
-                            Telefono = "100958912"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("fb426b74-9fb8-4de2-a8df-174a514de1a6"),
-                            DNI = "96742254",
-                            Direccion = "Calle B, 96, Trujillo",
-                            Email = "usuario499@yahoo.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3018),
-                            Nombres = "Luis Sofía",
-                            RUC = "20428729201",
-                            Telefono = "265737609"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("8322ab5d-11e4-44a9-af94-5499c9e42dd6"),
-                            DNI = "95005763",
-                            Direccion = "Calle B, 95, Arequipa",
-                            Email = "cliente223@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3025),
-                            Nombres = "Laura Juan",
-                            RUC = "20428729201",
-                            Telefono = "935339160"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("9da88606-3eff-49de-833f-32f26ac4d6a1"),
-                            DNI = "87762361",
-                            Direccion = "Calle B, 25, Cusco",
-                            Email = "correo888@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3031),
-                            Nombres = "Laura Luis",
-                            RUC = "20428729201",
-                            Telefono = "120659264"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("9fb1ad17-6348-443b-a23b-a9f2059ba0e5"),
-                            DNI = "30266638",
-                            Direccion = "Calle A, 85, Lima",
-                            Email = "contacto602@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3038),
-                            Nombres = "Diego Diego",
-                            RUC = "20428729201",
-                            Telefono = "100032901"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("801540d3-0ce7-484a-9ff7-43a9d6551dbe"),
-                            DNI = "45413170",
-                            Direccion = "Calle A, 31, Piura",
-                            Email = "contacto998@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3045),
+                            ClienteId = new Guid("5ee6c4be-5cec-4828-b2b7-f6c7fc18ccbd"),
+                            DNI = "90352780",
+                            Direccion = "Calle B, 34, Cusco",
+                            Email = "usuario126@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9331),
                             Nombres = "Laura Laura",
                             RUC = "20428729201",
-                            Telefono = "968527246"
+                            Telefono = "171886858"
                         },
                         new
                         {
-                            ClienteId = new Guid("72b2fc65-9719-4413-8b95-3f1fa6625fe8"),
-                            DNI = "30792270",
-                            Direccion = "Calle E, 45, Arequipa",
-                            Email = "contacto908@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3052),
-                            Nombres = "Sofía Laura",
+                            ClienteId = new Guid("8a645cdc-0dbc-4254-b884-7fd30dc4e6f9"),
+                            DNI = "40443270",
+                            Direccion = "Calle A, 8, Arequipa",
+                            Email = "comprador214@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9339),
+                            Nombres = "María Carlos",
                             RUC = "20428729201",
-                            Telefono = "707974597"
+                            Telefono = "374825382"
                         },
                         new
                         {
-                            ClienteId = new Guid("6c6b5062-664d-4061-9901-1466d440429d"),
-                            DNI = "12661397",
-                            Direccion = "Calle E, 51, Arequipa",
-                            Email = "contacto590@hotmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3059),
-                            Nombres = "Pedro Ana",
-                            RUC = "20428729201",
-                            Telefono = "716343340"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("d9dab566-d7b4-48a7-8ebe-26bdd3a31044"),
-                            DNI = "37113588",
-                            Direccion = "Calle D, 61, Lima",
-                            Email = "comprador68@example.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3068),
-                            Nombres = "Luis Juan",
-                            RUC = "20428729201",
-                            Telefono = "858797063"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("305cff0c-7a1a-4670-8254-96adc51c06dd"),
-                            DNI = "57489385",
-                            Direccion = "Calle B, 8, Piura",
-                            Email = "contacto837@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3075),
-                            Nombres = "Carlos Lucía",
-                            RUC = "20428729201",
-                            Telefono = "336366847"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("7c88385e-1a61-4100-81a9-1f9f1290af53"),
-                            DNI = "20210570",
-                            Direccion = "Calle D, 41, Piura",
-                            Email = "comprador233@yahoo.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3131),
-                            Nombres = "María María",
-                            RUC = "20428729201",
-                            Telefono = "628706172"
-                        },
-                        new
-                        {
-                            ClienteId = new Guid("39bfaa65-9e24-4d50-b9c9-499598dbe1e3"),
-                            DNI = "19279289",
-                            Direccion = "Calle E, 87, Cusco",
-                            Email = "cliente500@gmail.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3139),
+                            ClienteId = new Guid("5c48306b-7bfd-4ab6-95c8-77c33b87f3c8"),
+                            DNI = "36021212",
+                            Direccion = "Calle D, 95, Lima",
+                            Email = "comprador823@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9347),
                             Nombres = "Juan Luis",
                             RUC = "20428729201",
-                            Telefono = "898563628"
+                            Telefono = "766633834"
                         },
                         new
                         {
-                            ClienteId = new Guid("1d5cf94a-9875-4d57-839a-c78f6ee10779"),
-                            DNI = "25735202",
-                            Direccion = "Calle C, 5, Cusco",
-                            Email = "cliente398@outlook.com",
-                            Fecharegistro = new DateTime(2024, 7, 1, 4, 6, 20, 5, DateTimeKind.Utc).AddTicks(3147),
-                            Nombres = "Lucía Pedro",
+                            ClienteId = new Guid("5c0a6f81-ee48-4ed6-83d9-78556630196d"),
+                            DNI = "35542671",
+                            Direccion = "Calle C, 3, Arequipa",
+                            Email = "usuario393@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9389),
+                            Nombres = "Juan Juan",
                             RUC = "20428729201",
-                            Telefono = "422567215"
+                            Telefono = "667070672"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("11fa2766-849f-4d40-a843-7bef71b7ad34"),
+                            DNI = "26225371",
+                            Direccion = "Calle E, 41, Arequipa",
+                            Email = "contacto328@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9397),
+                            Nombres = "Carlos Diego",
+                            RUC = "20428729201",
+                            Telefono = "396749250"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("ed37995a-4a78-472c-9ed6-5bed5cc42b4f"),
+                            DNI = "12647563",
+                            Direccion = "Calle A, 64, Trujillo",
+                            Email = "correo515@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9405),
+                            Nombres = "Ana Diego",
+                            RUC = "20428729201",
+                            Telefono = "238947536"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("c1a12d06-165d-4473-b2fc-cd4ec4804c10"),
+                            DNI = "60839875",
+                            Direccion = "Calle A, 91, Trujillo",
+                            Email = "comprador813@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9411),
+                            Nombres = "Diego Juan",
+                            RUC = "20428729201",
+                            Telefono = "626386640"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("b4642ec2-b0d2-40d8-a007-cae3978b61f5"),
+                            DNI = "83508361",
+                            Direccion = "Calle D, 13, Arequipa",
+                            Email = "cliente925@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9418),
+                            Nombres = "Luis Laura",
+                            RUC = "20428729201",
+                            Telefono = "497149405"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("e3e4d5d6-dee6-4075-8240-97c2d7d1ea72"),
+                            DNI = "18231853",
+                            Direccion = "Calle C, 74, Arequipa",
+                            Email = "correo104@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9428),
+                            Nombres = "Diego Carlos",
+                            RUC = "20428729201",
+                            Telefono = "195109505"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("0d79076d-d68c-4616-9669-3961b11adcbd"),
+                            DNI = "21552324",
+                            Direccion = "Calle C, 78, Lima",
+                            Email = "comprador323@gmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9435),
+                            Nombres = "María Sofía",
+                            RUC = "20428729201",
+                            Telefono = "694202665"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("8450a3db-6e45-44d5-899e-f501b921379a"),
+                            DNI = "34304444",
+                            Direccion = "Calle A, 36, Piura",
+                            Email = "contacto667@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9442),
+                            Nombres = "Luis Laura",
+                            RUC = "20428729201",
+                            Telefono = "706316851"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("6abdd297-ba23-4dad-b5b1-913a695cd0e0"),
+                            DNI = "19382849",
+                            Direccion = "Calle D, 66, Trujillo",
+                            Email = "usuario672@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9449),
+                            Nombres = "Laura Juan",
+                            RUC = "20428729201",
+                            Telefono = "611456509"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("586d7072-a6bc-466b-8d00-17afe0c09c92"),
+                            DNI = "65108348",
+                            Direccion = "Calle D, 85, Trujillo",
+                            Email = "usuario767@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9455),
+                            Nombres = "Carlos Diego",
+                            RUC = "20428729201",
+                            Telefono = "542313331"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("9f411d68-53fe-4271-ad01-e1e90327504d"),
+                            DNI = "67906716",
+                            Direccion = "Calle B, 21, Lima",
+                            Email = "usuario534@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9462),
+                            Nombres = "Sofía Ana",
+                            RUC = "20428729201",
+                            Telefono = "877546326"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("126991b3-8fb2-43f7-9c09-c76b4dc82928"),
+                            DNI = "44651414",
+                            Direccion = "Calle E, 38, Arequipa",
+                            Email = "usuario968@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9468),
+                            Nombres = "Carlos María",
+                            RUC = "20428729201",
+                            Telefono = "682153556"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("7c1b28f9-0867-4766-a36b-fc8e412ba4a1"),
+                            DNI = "48490231",
+                            Direccion = "Calle C, 92, Piura",
+                            Email = "comprador452@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9506),
+                            Nombres = "Lucía Lucía",
+                            RUC = "20428729201",
+                            Telefono = "114467770"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("d647c5dd-fb2a-4bf6-9987-85a20cfc1f49"),
+                            DNI = "28474035",
+                            Direccion = "Calle E, 28, Piura",
+                            Email = "usuario23@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9516),
+                            Nombres = "Diego Diego",
+                            RUC = "20428729201",
+                            Telefono = "791206748"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("c14fd405-6730-40d7-9795-32f0ec93e148"),
+                            DNI = "80113193",
+                            Direccion = "Calle B, 60, Cusco",
+                            Email = "correo212@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9523),
+                            Nombres = "Sofía María",
+                            RUC = "20428729201",
+                            Telefono = "169785528"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("bcb3bd50-e038-4c79-b258-0c2a01db3e9c"),
+                            DNI = "61501267",
+                            Direccion = "Calle A, 13, Lima",
+                            Email = "comprador142@gmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9530),
+                            Nombres = "Laura Carlos",
+                            RUC = "20428729201",
+                            Telefono = "219727602"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("4a3fe57f-44ff-4a53-8a85-3323a2358e12"),
+                            DNI = "22626521",
+                            Direccion = "Calle C, 83, Cusco",
+                            Email = "comprador466@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9536),
+                            Nombres = "Carlos Sofía",
+                            RUC = "20428729201",
+                            Telefono = "647501701"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("3dbcc228-8979-4ad0-b778-a0dcea2e257c"),
+                            DNI = "94565777",
+                            Direccion = "Calle A, 15, Piura",
+                            Email = "usuario904@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9542),
+                            Nombres = "Laura Ana",
+                            RUC = "20428729201",
+                            Telefono = "203923116"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("2cc7be12-7baf-4717-97d1-2d6cee2d0cc2"),
+                            DNI = "12966658",
+                            Direccion = "Calle D, 13, Arequipa",
+                            Email = "cliente580@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9549),
+                            Nombres = "Laura Sofía",
+                            RUC = "20428729201",
+                            Telefono = "386640264"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("5f39556d-3736-45f3-a98c-2135cc3f63f3"),
+                            DNI = "52183809",
+                            Direccion = "Calle A, 38, Arequipa",
+                            Email = "cliente231@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9555),
+                            Nombres = "Lucía Diego",
+                            RUC = "20428729201",
+                            Telefono = "871777121"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("78ea5f7c-96c6-4847-ba6d-24e3cf5c3fe1"),
+                            DNI = "23466514",
+                            Direccion = "Calle E, 6, Arequipa",
+                            Email = "correo587@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9562),
+                            Nombres = "Luis Carlos",
+                            RUC = "20428729201",
+                            Telefono = "399524287"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("ad7ae9f5-b986-4d75-bd61-72290754175f"),
+                            DNI = "21903659",
+                            Direccion = "Calle D, 19, Arequipa",
+                            Email = "correo609@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9570),
+                            Nombres = "Carlos Laura",
+                            RUC = "20428729201",
+                            Telefono = "788221495"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("c416465c-43ab-4024-9938-c351757b1f84"),
+                            DNI = "92284717",
+                            Direccion = "Calle B, 32, Piura",
+                            Email = "cliente306@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9577),
+                            Nombres = "Carlos Ana",
+                            RUC = "20428729201",
+                            Telefono = "972107901"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("4e9c0e61-aa86-4fca-8a88-356f674a2913"),
+                            DNI = "31690674",
+                            Direccion = "Calle C, 35, Piura",
+                            Email = "correo808@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9607),
+                            Nombres = "Laura Carlos",
+                            RUC = "20428729201",
+                            Telefono = "254756980"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("6fcc6297-adcc-42e2-9857-4a333437b680"),
+                            DNI = "34601394",
+                            Direccion = "Calle B, 58, Lima",
+                            Email = "usuario243@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9613),
+                            Nombres = "Diego Sofía",
+                            RUC = "20428729201",
+                            Telefono = "877142650"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("d2f7b4fc-1c01-4943-a112-1dcc683867e3"),
+                            DNI = "38925836",
+                            Direccion = "Calle B, 96, Cusco",
+                            Email = "cliente522@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9620),
+                            Nombres = "Laura Lucía",
+                            RUC = "20428729201",
+                            Telefono = "786108775"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("2d459072-80c9-4034-a5ff-3dced01db33e"),
+                            DNI = "74009375",
+                            Direccion = "Calle E, 39, Cusco",
+                            Email = "usuario778@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9626),
+                            Nombres = "Laura Sofía",
+                            RUC = "20428729201",
+                            Telefono = "168860627"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("63ccd400-0e68-4bf3-af6a-58df182c0bdd"),
+                            DNI = "91265207",
+                            Direccion = "Calle E, 51, Cusco",
+                            Email = "comprador451@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9633),
+                            Nombres = "Laura Laura",
+                            RUC = "20428729201",
+                            Telefono = "570611304"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("6f7569b0-17ce-4464-b389-113b4ce02869"),
+                            DNI = "19172444",
+                            Direccion = "Calle C, 55, Cusco",
+                            Email = "comprador733@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9639),
+                            Nombres = "Luis Laura",
+                            RUC = "20428729201",
+                            Telefono = "247462723"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("474aa05c-a714-4ea3-9024-718eb0b60a5e"),
+                            DNI = "40090833",
+                            Direccion = "Calle E, 33, Lima",
+                            Email = "usuario504@gmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9647),
+                            Nombres = "Carlos Laura",
+                            RUC = "20428729201",
+                            Telefono = "664155112"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("5f93fa47-3ccf-4a7c-b006-66f39b49d1a0"),
+                            DNI = "91649858",
+                            Direccion = "Calle C, 48, Trujillo",
+                            Email = "cliente137@gmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9654),
+                            Nombres = "Pedro Pedro",
+                            RUC = "20428729201",
+                            Telefono = "400577372"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("edc50b65-840b-4a69-b125-cc91026eb164"),
+                            DNI = "15236727",
+                            Direccion = "Calle A, 96, Piura",
+                            Email = "correo182@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9660),
+                            Nombres = "Diego Luis",
+                            RUC = "20428729201",
+                            Telefono = "836227130"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("334eb905-ae32-45ec-a539-033967204104"),
+                            DNI = "33596840",
+                            Direccion = "Calle B, 71, Cusco",
+                            Email = "correo880@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9667),
+                            Nombres = "Diego Laura",
+                            RUC = "20428729201",
+                            Telefono = "196101588"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("e2f99fa9-2457-4443-8a64-d698ba1af1d2"),
+                            DNI = "59322638",
+                            Direccion = "Calle D, 83, Cusco",
+                            Email = "correo73@gmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9673),
+                            Nombres = "Carlos Ana",
+                            RUC = "20428729201",
+                            Telefono = "448928565"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("fd30bce6-b1ce-43d8-8fc2-a1faa638ff80"),
+                            DNI = "29289673",
+                            Direccion = "Calle E, 95, Trujillo",
+                            Email = "contacto746@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9706),
+                            Nombres = "Carlos Carlos",
+                            RUC = "20428729201",
+                            Telefono = "906258525"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("49f464e8-99dc-41fa-8eaa-e97fc9bda57c"),
+                            DNI = "57609722",
+                            Direccion = "Calle E, 64, Cusco",
+                            Email = "correo12@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9713),
+                            Nombres = "Luis Lucía",
+                            RUC = "20428729201",
+                            Telefono = "861550794"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("213a1a0f-e357-4359-9cbc-7a49e9e3de66"),
+                            DNI = "70591647",
+                            Direccion = "Calle C, 71, Piura",
+                            Email = "cliente143@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9719),
+                            Nombres = "Ana Lucía",
+                            RUC = "20428729201",
+                            Telefono = "994734250"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("78da8779-6196-4ff1-b2aa-2361058fdd05"),
+                            DNI = "68713038",
+                            Direccion = "Calle B, 43, Piura",
+                            Email = "comprador986@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9728),
+                            Nombres = "Luis María",
+                            RUC = "20428729201",
+                            Telefono = "270254784"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("4fbe99c1-5593-4f35-a4a5-c723efd54317"),
+                            DNI = "13622468",
+                            Direccion = "Calle D, 89, Cusco",
+                            Email = "cliente25@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9734),
+                            Nombres = "Carlos Lucía",
+                            RUC = "20428729201",
+                            Telefono = "230166653"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("66a8db37-0709-4ce1-8651-7c0e413d2be1"),
+                            DNI = "59898441",
+                            Direccion = "Calle B, 53, Arequipa",
+                            Email = "correo963@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9741),
+                            Nombres = "Sofía Carlos",
+                            RUC = "20428729201",
+                            Telefono = "274859585"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("ad547c16-9544-4f56-92d6-e17c5126e07b"),
+                            DNI = "15087641",
+                            Direccion = "Calle A, 37, Trujillo",
+                            Email = "correo392@yahoo.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9748),
+                            Nombres = "Juan María",
+                            RUC = "20428729201",
+                            Telefono = "313004253"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("e9906db8-8b4d-4ae7-99d1-346203461895"),
+                            DNI = "16552269",
+                            Direccion = "Calle A, 44, Piura",
+                            Email = "usuario50@example.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9755),
+                            Nombres = "María Juan",
+                            RUC = "20428729201",
+                            Telefono = "201159091"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("c66bfb07-ad07-4d13-b97d-8a9de7ec6dd7"),
+                            DNI = "63228196",
+                            Direccion = "Calle C, 3, Piura",
+                            Email = "contacto891@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9761),
+                            Nombres = "Laura Diego",
+                            RUC = "20428729201",
+                            Telefono = "959007828"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("7c7489c5-7265-4ff8-aba7-a87cba10b6a4"),
+                            DNI = "91088401",
+                            Direccion = "Calle A, 48, Arequipa",
+                            Email = "cliente141@outlook.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9767),
+                            Nombres = "Lucía Luis",
+                            RUC = "20428729201",
+                            Telefono = "356690733"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("9241543a-abf2-4314-b8f6-ef6137afea73"),
+                            DNI = "70075060",
+                            Direccion = "Calle B, 19, Piura",
+                            Email = "usuario129@hotmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9774),
+                            Nombres = "Lucía Lucía",
+                            RUC = "20428729201",
+                            Telefono = "142937363"
+                        },
+                        new
+                        {
+                            ClienteId = new Guid("042dd2c1-1c6e-4aad-92f8-5cf5294fa67c"),
+                            DNI = "94140184",
+                            Direccion = "Calle C, 3, Cusco",
+                            Email = "usuario363@gmail.com",
+                            Fecharegistro = new DateTime(2024, 7, 7, 20, 53, 5, 577, DateTimeKind.Utc).AddTicks(9783),
+                            Nombres = "Ana Pedro",
+                            RUC = "20428729201",
+                            Telefono = "272193453"
                         });
                 });
 
@@ -800,6 +800,9 @@ namespace Persistencia.Migrations
                     b.Property<DateTime?>("FechaEntrada")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("NombreInventario")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid?>("ProveedorId")
                         .HasColumnType("uniqueidentifier");
 
@@ -859,27 +862,27 @@ namespace Persistencia.Migrations
                     b.HasData(
                         new
                         {
-                            MetodoPagoId = new Guid("2921ae1b-171b-4d4f-b940-381fc2c0be42"),
+                            MetodoPagoId = new Guid("3b65abc5-cdf6-4552-b7c4-277dd53882ca"),
                             TipoMetodo = "efectivo"
                         },
                         new
                         {
-                            MetodoPagoId = new Guid("7484104a-48a6-4f27-8041-ffeab27e2537"),
+                            MetodoPagoId = new Guid("98445684-5420-49d4-ac80-be80e48d52e7"),
                             TipoMetodo = "Visa"
                         },
                         new
                         {
-                            MetodoPagoId = new Guid("32392a6f-2570-49fa-8fc9-798b322920ce"),
+                            MetodoPagoId = new Guid("3fb51201-5763-4ba9-bc09-36929a2eddb6"),
                             TipoMetodo = "MasterCard"
                         },
                         new
                         {
-                            MetodoPagoId = new Guid("25a03479-ebb3-4f75-a368-622ec0cd9373"),
+                            MetodoPagoId = new Guid("b363b921-a195-452b-9002-f353768288a6"),
                             TipoMetodo = "American Express"
                         },
                         new
                         {
-                            MetodoPagoId = new Guid("1beb2875-4b57-404c-ac78-2fbe1762b133"),
+                            MetodoPagoId = new Guid("e39dbd7f-bee9-414d-ab0e-8b4e49692fd4"),
                             TipoMetodo = "PayPal"
                         });
                 });
@@ -981,303 +984,303 @@ namespace Persistencia.Migrations
                     b.HasData(
                         new
                         {
-                            ProductoProveedorId = new Guid("0a1ee0b0-a04e-4569-876f-4a9eb5735ce6"),
-                            Preciocompra = 704.94m,
-                            Preciounitario = 191.89m
+                            ProductoProveedorId = new Guid("ab56564e-a256-4082-9fa7-9cecee0cf26a"),
+                            Preciocompra = 688.20m,
+                            Preciounitario = 910.00m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("21b45a50-b7d4-40f8-94de-b320573bb411"),
-                            Preciocompra = 366.63m,
-                            Preciounitario = 818.58m
+                            ProductoProveedorId = new Guid("17e7449b-45bf-439e-beaa-0318bb2ecc1b"),
+                            Preciocompra = 758.95m,
+                            Preciounitario = 388.55m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("3c5f0b8d-5883-47ae-8c20-af3d5b9ffa98"),
-                            Preciocompra = 279.57m,
-                            Preciounitario = 301.70m
+                            ProductoProveedorId = new Guid("8bafb057-1ba5-446b-9c0e-32877958c906"),
+                            Preciocompra = 594.75m,
+                            Preciounitario = 377.30m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("d476a1b4-57a8-4900-b4fb-8ef5647ef4ef"),
-                            Preciocompra = 662.37m,
-                            Preciounitario = 757.31m
+                            ProductoProveedorId = new Guid("51e53a68-893f-4a18-bdb7-684b959f6a85"),
+                            Preciocompra = 767.21m,
+                            Preciounitario = 450.45m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("004002aa-27df-4e19-b289-f3dec6811a54"),
-                            Preciocompra = 85.25m,
-                            Preciounitario = 58.63m
+                            ProductoProveedorId = new Guid("f74b2ccd-1264-4468-88b8-3fbfdf02fd5b"),
+                            Preciocompra = 530.64m,
+                            Preciounitario = 21.63m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("0f235ff2-1bd4-4bdd-b1e8-d3b631a17973"),
-                            Preciocompra = 85.60m,
-                            Preciounitario = 505.69m
+                            ProductoProveedorId = new Guid("ebf5708a-6368-4f75-9f5b-77cda4f920e3"),
+                            Preciocompra = 603.17m,
+                            Preciounitario = 653.43m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("879b4802-82f8-4172-8b9f-258c894a84f9"),
-                            Preciocompra = 414.97m,
-                            Preciounitario = 184.21m
+                            ProductoProveedorId = new Guid("a210b81d-57d3-4f60-813a-e59f45e1c130"),
+                            Preciocompra = 926.49m,
+                            Preciounitario = 342.58m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("aba5e142-31fb-480b-91b4-bacfdcf1d0f0"),
-                            Preciocompra = 89.43m,
-                            Preciounitario = 393.19m
+                            ProductoProveedorId = new Guid("db8ad285-21fe-489c-b554-6ee454462928"),
+                            Preciocompra = 811.66m,
+                            Preciounitario = 779.11m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("9d677ca9-ceb6-44cf-acd5-6898c5142a49"),
-                            Preciocompra = 5.20m,
-                            Preciounitario = 596.81m
+                            ProductoProveedorId = new Guid("3ca1c209-b37e-44cb-8ea2-d6e5f4ca59d8"),
+                            Preciocompra = 720.42m,
+                            Preciounitario = 671.89m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("39b689f3-b1c7-4b61-a44a-b35db4dc7deb"),
-                            Preciocompra = 891.77m,
-                            Preciounitario = 694.99m
+                            ProductoProveedorId = new Guid("3267b8be-e8ed-4581-8b25-586a0760ea72"),
+                            Preciocompra = 928.31m,
+                            Preciounitario = 118.86m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("345ffa63-c6bd-4ee2-aec0-15a483bddac1"),
-                            Preciocompra = 453.07m,
-                            Preciounitario = 995.95m
+                            ProductoProveedorId = new Guid("51acbf24-b11e-432d-91f9-3b0aa53d1602"),
+                            Preciocompra = 458.62m,
+                            Preciounitario = 204.41m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("6158a637-265b-43bd-8474-ebdb22b762be"),
-                            Preciocompra = 556.21m,
-                            Preciounitario = 105.42m
+                            ProductoProveedorId = new Guid("a0db3bc9-4b72-488c-a64c-8ef2a6f7112e"),
+                            Preciocompra = 743.70m,
+                            Preciounitario = 245.05m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("427f5a12-67f6-4fb1-8869-accb0b923ed2"),
-                            Preciocompra = 512.32m,
-                            Preciounitario = 248.05m
+                            ProductoProveedorId = new Guid("c66128f2-ac05-4164-a9c9-cab8d31a9f8d"),
+                            Preciocompra = 537.53m,
+                            Preciounitario = 101.30m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("c675dafe-01c6-494b-a9ea-df7ba4170e27"),
-                            Preciocompra = 912.97m,
-                            Preciounitario = 913.49m
+                            ProductoProveedorId = new Guid("1adc2aa1-d127-4d2f-94d6-068b1d11fed2"),
+                            Preciocompra = 747.24m,
+                            Preciounitario = 484.76m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("4dbc7fec-d030-4166-9198-3769166e17b1"),
-                            Preciocompra = 173.01m,
-                            Preciounitario = 438.30m
+                            ProductoProveedorId = new Guid("d2669360-639f-4863-90b3-652d860639d9"),
+                            Preciocompra = 31.97m,
+                            Preciounitario = 823.28m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("925801d0-db20-4bc3-8511-8df8e1daf4bc"),
-                            Preciocompra = 612.74m,
-                            Preciounitario = 241.42m
+                            ProductoProveedorId = new Guid("d643f595-554e-41a3-8172-e824e9e32e61"),
+                            Preciocompra = 953.11m,
+                            Preciounitario = 40.47m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("0407737c-29f7-4796-b448-c68d03c9afcf"),
-                            Preciocompra = 560.76m,
-                            Preciounitario = 622.70m
+                            ProductoProveedorId = new Guid("8f160ceb-3f81-4386-b0b9-8457ca32b86a"),
+                            Preciocompra = 21.03m,
+                            Preciounitario = 844.51m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("64714694-60de-4409-b19b-015514e28d65"),
-                            Preciocompra = 338.34m,
-                            Preciounitario = 924.92m
+                            ProductoProveedorId = new Guid("c960ee6b-1eb3-43ae-a48a-a3d59bdf762d"),
+                            Preciocompra = 551.84m,
+                            Preciounitario = 900.18m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("19b60b72-fe13-484a-8b74-c8705bbc0715"),
-                            Preciocompra = 742.93m,
-                            Preciounitario = 432.40m
+                            ProductoProveedorId = new Guid("a16b7439-adb4-4bf8-8a86-54f5565f17b1"),
+                            Preciocompra = 603.98m,
+                            Preciounitario = 686.47m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("ace59ed3-9698-4976-8f0e-39ede4d506ee"),
-                            Preciocompra = 349.75m,
-                            Preciounitario = 487.41m
+                            ProductoProveedorId = new Guid("600f5850-3336-42ef-b44f-98937bc3f785"),
+                            Preciocompra = 507.69m,
+                            Preciounitario = 491.79m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("c0db53c1-ff98-4196-b71a-83172245d642"),
-                            Preciocompra = 697.77m,
-                            Preciounitario = 941.53m
+                            ProductoProveedorId = new Guid("ec0ff63b-d58c-4397-bca3-6695e3c6e3e4"),
+                            Preciocompra = 401.33m,
+                            Preciounitario = 800.13m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("55e8890e-b98b-4bc5-91dd-46ee4c4b9253"),
-                            Preciocompra = 332.11m,
-                            Preciounitario = 63.68m
+                            ProductoProveedorId = new Guid("cc8c6524-b2a3-44f3-b295-5ba778044d6f"),
+                            Preciocompra = 592.69m,
+                            Preciounitario = 292.32m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("5aa59da5-e773-4da4-a568-544d80d54bfa"),
-                            Preciocompra = 463.67m,
-                            Preciounitario = 44.39m
+                            ProductoProveedorId = new Guid("56bd4e9a-d020-41a2-a325-b620843924c2"),
+                            Preciocompra = 450.29m,
+                            Preciounitario = 875.52m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("fd9e7054-45f9-449d-bbe9-8165af8fd62d"),
-                            Preciocompra = 209.92m,
-                            Preciounitario = 31.65m
+                            ProductoProveedorId = new Guid("aec4cca2-4907-408e-a9b6-c8773cda21fa"),
+                            Preciocompra = 299.24m,
+                            Preciounitario = 15.36m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("cbd2f97e-d5e2-402d-bd0b-7009fe18ff2e"),
-                            Preciocompra = 34.74m,
-                            Preciounitario = 200.40m
+                            ProductoProveedorId = new Guid("c1e857b3-7829-4ba1-a0ca-a534f159efef"),
+                            Preciocompra = 871.09m,
+                            Preciounitario = 333.08m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("9d9d06de-9ef3-464b-8ddb-ef6d16e84a73"),
-                            Preciocompra = 905.44m,
-                            Preciounitario = 601.90m
+                            ProductoProveedorId = new Guid("cbe16142-3f4c-4777-b726-3f1757221229"),
+                            Preciocompra = 122.69m,
+                            Preciounitario = 848.76m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("ac279da4-99c6-44ac-b166-bb890bf4c232"),
-                            Preciocompra = 397.27m,
-                            Preciounitario = 430.49m
+                            ProductoProveedorId = new Guid("3466f800-5f38-41ec-beaa-dad3de255f0f"),
+                            Preciocompra = 921.95m,
+                            Preciounitario = 23.84m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("f09b2bfe-dbe6-4592-a0ce-5ba497b8b73c"),
-                            Preciocompra = 551.45m,
-                            Preciounitario = 865.16m
+                            ProductoProveedorId = new Guid("33c2719d-8d83-41ab-82a4-a6e9b890b21f"),
+                            Preciocompra = 710.13m,
+                            Preciounitario = 582.24m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("207b7bb4-f927-4d36-ade8-93068e03df29"),
-                            Preciocompra = 428.79m,
-                            Preciounitario = 13.71m
+                            ProductoProveedorId = new Guid("981a6217-1879-42c1-9ad1-54192c3222e6"),
+                            Preciocompra = 889.76m,
+                            Preciounitario = 851.98m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("b0695150-fd12-43ce-959d-e758558c1ae0"),
-                            Preciocompra = 73.70m,
-                            Preciounitario = 151.12m
+                            ProductoProveedorId = new Guid("2bcbb5d7-d346-41dd-b39a-00dbc6f47b68"),
+                            Preciocompra = 0.16m,
+                            Preciounitario = 648.37m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("14134ee9-de1c-47f3-aadd-a87b555a75d3"),
-                            Preciocompra = 340.89m,
-                            Preciounitario = 596.20m
+                            ProductoProveedorId = new Guid("a0a31f75-af5a-4ecd-951b-492f674f7e51"),
+                            Preciocompra = 274.24m,
+                            Preciounitario = 959.19m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("e308ad4d-7021-4db8-832c-b2ff002239c1"),
-                            Preciocompra = 404.45m,
-                            Preciounitario = 117.66m
+                            ProductoProveedorId = new Guid("340cbb89-fcfa-485b-b514-819b670f712f"),
+                            Preciocompra = 813.24m,
+                            Preciounitario = 413.26m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("59759d0f-c3e1-4330-a181-45ff732e68ee"),
-                            Preciocompra = 689.70m,
-                            Preciounitario = 158.11m
+                            ProductoProveedorId = new Guid("d98d4ce7-66f7-4e96-b597-fe780a32d116"),
+                            Preciocompra = 709.68m,
+                            Preciounitario = 927.58m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("e73b17b4-bd39-4b10-809b-61c62f82dc17"),
-                            Preciocompra = 818.31m,
-                            Preciounitario = 687.06m
+                            ProductoProveedorId = new Guid("31f8568c-81b6-45c6-9c90-2566bfcd2bfc"),
+                            Preciocompra = 102.84m,
+                            Preciounitario = 388.98m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("7ea68be5-0120-40bd-81fb-d8e82ac03f77"),
-                            Preciocompra = 684.40m,
-                            Preciounitario = 711.21m
+                            ProductoProveedorId = new Guid("b62ed0cf-9786-472b-95fa-1a36729c0511"),
+                            Preciocompra = 281.67m,
+                            Preciounitario = 965.35m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("c7a2c489-e0c8-4795-a01e-46a7a7bd7f2b"),
-                            Preciocompra = 619.96m,
-                            Preciounitario = 713.93m
+                            ProductoProveedorId = new Guid("ad23b9a3-64b4-45c2-92b8-09044013c903"),
+                            Preciocompra = 393.71m,
+                            Preciounitario = 977.64m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("8a62c2e0-bbe7-4ff2-ae9e-4c4d4f393128"),
-                            Preciocompra = 873.64m,
-                            Preciounitario = 954.62m
+                            ProductoProveedorId = new Guid("863743d3-6861-4c27-8799-1c991d241076"),
+                            Preciocompra = 54.77m,
+                            Preciounitario = 760.66m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("cbc22ef3-4c5f-497c-ab3c-9e59b566cea5"),
-                            Preciocompra = 801.99m,
-                            Preciounitario = 530.99m
+                            ProductoProveedorId = new Guid("58d76b43-625d-467e-abf8-eafee04c7cca"),
+                            Preciocompra = 434.02m,
+                            Preciounitario = 711.60m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("10e0254c-b556-4bfd-975b-a446c9ea568d"),
-                            Preciocompra = 404.15m,
-                            Preciounitario = 109.66m
+                            ProductoProveedorId = new Guid("bcaf0deb-b665-48ed-8723-62d620ff906b"),
+                            Preciocompra = 696.64m,
+                            Preciounitario = 1.15m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("7aa86c77-ab4b-4a0d-b2e4-52d220077b26"),
-                            Preciocompra = 490.52m,
-                            Preciounitario = 806.29m
+                            ProductoProveedorId = new Guid("74257373-7f6c-4224-9c38-2ee1f686cdff"),
+                            Preciocompra = 417.10m,
+                            Preciounitario = 736.76m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("2ad295ac-4ddc-425b-9c41-42fc4fe6337a"),
-                            Preciocompra = 797.58m,
-                            Preciounitario = 21.14m
+                            ProductoProveedorId = new Guid("eb15e6cb-f762-43a8-aa57-3d766168ca68"),
+                            Preciocompra = 388.41m,
+                            Preciounitario = 734.68m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("fd6a4c67-0ca3-40a0-9942-a03fd3f95246"),
-                            Preciocompra = 196.84m,
-                            Preciounitario = 123.01m
+                            ProductoProveedorId = new Guid("4f2564d8-61fb-4179-aba8-484875d7c8db"),
+                            Preciocompra = 901.59m,
+                            Preciounitario = 295.79m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("e9919ed8-3721-446a-81c6-3ff7ebf5781e"),
-                            Preciocompra = 879.51m,
-                            Preciounitario = 649.01m
+                            ProductoProveedorId = new Guid("bad0dcd6-1423-48a6-8131-dfaece5fc002"),
+                            Preciocompra = 759.09m,
+                            Preciounitario = 983.06m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("9f28d6cb-b9dd-4546-9ab6-4a9e1d280711"),
-                            Preciocompra = 869.63m,
-                            Preciounitario = 418.59m
+                            ProductoProveedorId = new Guid("6f5a59ed-5c9d-4d74-b407-e14e089333d8"),
+                            Preciocompra = 51.91m,
+                            Preciounitario = 859.87m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("db2a45b5-8d51-49c4-b073-33cab12d357a"),
-                            Preciocompra = 208.05m,
-                            Preciounitario = 951.26m
+                            ProductoProveedorId = new Guid("d8f1eb1a-3028-4654-9b96-ba8f18242470"),
+                            Preciocompra = 491.61m,
+                            Preciounitario = 501.18m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("a061e04d-9b78-4b3a-933f-73168b8de749"),
-                            Preciocompra = 825.00m,
-                            Preciounitario = 614.14m
+                            ProductoProveedorId = new Guid("f5a6bcee-eaa9-4db8-b4de-3e5830f36294"),
+                            Preciocompra = 143.16m,
+                            Preciounitario = 933.86m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("f34e94b7-613c-4285-9b40-9df0c59bfaf4"),
-                            Preciocompra = 8.81m,
-                            Preciounitario = 91.52m
+                            ProductoProveedorId = new Guid("cd4c2ca7-588f-4e90-800e-a1bfcfc3d245"),
+                            Preciocompra = 537.30m,
+                            Preciounitario = 791.87m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("3d9aa8dc-52ed-45ce-a5ee-a3617c706d2d"),
-                            Preciocompra = 172.79m,
-                            Preciounitario = 678.52m
+                            ProductoProveedorId = new Guid("28898dd3-a8de-4851-9505-5babd343a19a"),
+                            Preciocompra = 963.16m,
+                            Preciounitario = 172.96m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("5fc86587-cb5b-4162-b97f-26021ecb7050"),
-                            Preciocompra = 455.19m,
-                            Preciounitario = 896.63m
+                            ProductoProveedorId = new Guid("049fdac4-5677-49d2-969f-131627578055"),
+                            Preciocompra = 960.04m,
+                            Preciounitario = 51.13m
                         },
                         new
                         {
-                            ProductoProveedorId = new Guid("37bb82e7-1619-46fe-9998-095915812a38"),
-                            Preciocompra = 730.35m,
-                            Preciounitario = 669.02m
+                            ProductoProveedorId = new Guid("a854a9e1-39f5-4a77-8f14-40c5b282d609"),
+                            Preciocompra = 53.53m,
+                            Preciounitario = 45.06m
                         });
                 });
 

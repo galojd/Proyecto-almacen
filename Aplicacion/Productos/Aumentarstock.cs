@@ -39,9 +39,10 @@ namespace Aplicacion.Productos
                 var detalleinventario = await _contexto.DetalleInventario!.FirstOrDefaultAsync(p => p.ProductoId == codigoproducto, cancellationToken);
                 if(detalleinventario == null){
                     throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se tiene un registro asociado"});
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se tiene un registro asociado"});
                 }
                 var ahora = request.cantidad;
-                var stockantes = detalleinventario.StockAnterior + detalleinventario.StockIngreso;
+                var stockantes = detalleinventario.StockTotal;
                 var stocktodo = stockantes + ahora;
                 var preciototal = preciounico * stocktodo;
                 detalleinventario.StockAnterior = stockantes ?? detalleinventario.StockAnterior;

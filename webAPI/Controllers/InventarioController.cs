@@ -23,6 +23,12 @@ namespace webAPI.Controllers
             return await Mediator.Send(new ConsultaInventario.Listainventario());
         }
 
+        [HttpGet("inventariodesplegable")]
+        public async Task<ActionResult<List<InventarioLimpio>>> Getlista(){
+            
+            return await Mediator.Send(new ListaInventario.Listainventario());
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Inventario>> buscaidinventario(Guid id){
            

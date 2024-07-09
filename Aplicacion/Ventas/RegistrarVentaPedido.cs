@@ -8,36 +8,53 @@ using Dominio.entities;
 using MediatR;
 using Persistencia;
 
-
-namespace Aplicacion.DetallePedidos
+namespace Aplicacion.Ventas
 {
-    public class RegistrarDetallepedido
+    public class RegistrarVentaPedido
     {
         public class Ejecuta : IRequest<string>
         {
+            public string? Descripcion{ get; set; }
+            public Guid ClienteId{ get; set; }
             public int? Cantidad{ get; set; }
-            public decimal? Precio{ get;set;}
-            public DateTime? FechaPedido{ get; set; }
-            public Guid? ProductoId{ get; set; }
-            public Guid VentaId{ get; set; }
+            //public decimal? Precio{ get;set;}
+            public Guid? ProductoId{ get; set; } 
         }
 
         public class Manejador : IRequestHandler<Ejecuta, string>
         {
             private readonly AlmacenOnlineContext _contexto;
-
             public Manejador(AlmacenOnlineContext contexto){
                 _contexto = contexto;
             }
             public async Task<string> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
+                var producto = await _contexto.Producto!.FindAsync(request.ProductoId);
+                if(producto == null){
+                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new {mensaje = "no se pudo encontrar el registro"});
+                }
+                
+
+                var preciounico = producto.PrecioUnitario;
+                var Preciototal = preciounico * request.Cantidad; 
+
+                Guid _ventaid = Guid.NewGuid();
+                var venta = new Venta{
+                    VentaId = _ventaid,
+                    Fecha = DateTime.UtcNow,
+                    PrecioTotal = Preciototal,
+                    Descripcion = request.Descripcion,
+                    ClienteId = request.ClienteId
+                };
+                _contexto.Venta!.Add(venta);
+
                 Guid _detallepedidoid = Guid.NewGuid();
                 var detallepedido = new DetallePedido{
                     DetallePedidoId = _detallepedidoid,
                     Cantidad = request.Cantidad,
-                    Precio = request.Precio,
+                    Precio = preciounico,
                     ProductoId = request.ProductoId,
-                    VentaId = request.VentaId,
+                    VentaId = _ventaid,
                     FechaPedido = DateTime.UtcNow
                 };
                 _contexto.DetallePedido!.Add(detallepedido);
@@ -48,7 +65,9 @@ namespace Aplicacion.DetallePedidos
                 }
                 throw new ManejadorExcepcion(HttpStatusCode.BadRequest, new { mensaje = "No se pudo insertar el registro" });  
             }
+
         }
 
+        
     }
 }

@@ -8,6 +8,7 @@ namespace Dominio.entities
     public class Inventario
     {
         public Guid InventarioId{ get; set; }
+        //public String? NombreInventario{ get; set; }
         public DateTime? FechaEntrada{ get; set; }
         public int? CantidadProducto{ get; set; }
         public Guid? ProveedorId{ get; set; }

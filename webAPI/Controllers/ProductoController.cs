@@ -20,6 +20,11 @@ namespace webAPI.Controllers
             return await Mediator.Send(data);
         }
 
+        [HttpPost("registrarproducto")]
+        public async Task<ActionResult<string>> Crearproducto(RegistrarProductoInventario.Ejecuta data){
+            return await Mediator.Send(data);
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<ProductoDTO>>> Get()
         {
@@ -32,6 +37,12 @@ namespace webAPI.Controllers
         {
 
             return await Mediator.Send(new BuscaIdProducto.Ejecuta { Id = id });
+        }
+
+        [HttpGet("cantidadproductosStock")]
+        public async Task<ActionResult<List<NumeroStock>>> cantidad()
+        {
+            return await Mediator.Send(new StockProducto.Listacantidad());
         }
 
         [HttpPut("{id}")]

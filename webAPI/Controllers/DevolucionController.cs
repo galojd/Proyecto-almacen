@@ -17,6 +17,11 @@ namespace webAPI.Controllers
             return await Mediator.Send(data);
         }
 
+        [HttpPost("RegistrarDevolucion")]
+        public async Task<ActionResult<string>> Creardevolucion(Registradevolucionproducto.Ejecuta data){
+            return await Mediator.Send(data);
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<devolucionDTO>>> Get(){
             

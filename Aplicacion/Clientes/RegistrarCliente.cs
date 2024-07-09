@@ -7,6 +7,7 @@ using Aplicacion.ManejadorError;
 using Dominio.entities;
 using MediatR;
 using Persistencia;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aplicacion.Clientes
 {
@@ -31,7 +32,13 @@ namespace Aplicacion.Clientes
             }
             public async Task<string> Handle(ejecuta request, CancellationToken cancellationToken)
             {
-                 //aqui generamos el id con un guid, el guid crea un valor aleatorio
+                var clientes = await _contexto.Cliente!
+                                            .FirstOrDefaultAsync(p => p.DNI == request.DNI, cancellationToken);
+
+                if (clientes != null)
+                {
+                    throw new ManejadorExcepcion(HttpStatusCode.Conflict, new { mensaje = "Ya registro a este cliente." }); 
+                }
                 Guid _clienteid = Guid.NewGuid();
                 var cliente = new Cliente{
                     ClienteId = _clienteid,

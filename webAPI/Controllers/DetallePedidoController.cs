@@ -23,6 +23,12 @@ namespace webAPI.Controllers
             return await Mediator.Send(new ConsultaDetallepedido.ListaDetallepedido());
         }
 
+        [HttpGet("ProductosDetalle")]
+        public async Task<ActionResult<List<DetallePedidoNombre>>> Getdetalleproducto(){
+            
+            return await Mediator.Send(new MostrarDetallePedidoNombre.ListaVentas());
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<DetallePedido>> buscaidcomprapago(Guid id){
            
